@@ -19,13 +19,18 @@
 
 <body>
   <script>
-  var url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSITdXPzQ_5eidATjL9j7uBicp4qvDuhx55IPvbMJ_jor8JU60UWCHwaHdXcR654W8Tp6VIjg-8V7g0/pub?output=tsv';
-jQuery.getJSON(url).success(function(data) {
-    document.getElementById('test').innerHTML = data; 
-}).error(function(message) {
-    console.error('error' + message); 
-}).complete(function() {
-    console.log('completed!'); 
+var url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSITdXPzQ_5eidATjL9j7uBicp4qvDuhx55IPvbMJ_jor8JU60UWCHwaHdXcR654W8Tp6VIjg-8V7g0/pub?output=tsv';
+jQuery.getJSON(url).success(function (data)
+{
+  document.getElementById('test').innerHTML = data;
+  console.log(data);
+}).error(function (message)
+{
+  console.error('error' + message);
+}).complete(function ()
+{
+  console.log('completed!');
+});
   </script>
 <h1>No.</h1>
 <p id="test">Darrell was here<p>
