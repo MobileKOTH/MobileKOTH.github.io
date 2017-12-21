@@ -19,16 +19,16 @@
 
 <body>
   <script>
-  var url = 'https://spreadsheets.google.com/feeds/list/<CODE>/od6/public/values?alt=json-in-script&callback=?';
+  var url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSITdXPzQ_5eidATjL9j7uBicp4qvDuhx55IPvbMJ_jor8JU60UWCHwaHdXcR654W8Tp6VIjg-8V7g0/pub?output=tsv';
 jQuery.getJSON(url).success(function(data) {
-    console.log(data); 
+    document.getElementById('test').innerHTML = data; 
 }).error(function(message) {
     console.error('error' + message); 
 }).complete(function() {
     console.log('completed!'); 
-  <script>
+  </script>
 <h1>No.</h1>
-<p>Darrell was here<p>
+<p id="test">Darrell was here<p>
 </body>
 
 </html>
