@@ -18,6 +18,15 @@
 </head>
 
 <body>
+  <script>
+  var url = 'https://spreadsheets.google.com/feeds/list/<CODE>/od6/public/values?alt=json-in-script&callback=?';
+jQuery.getJSON(url).success(function(data) {
+    console.log(data); 
+}).error(function(message) {
+    console.error('error' + message); 
+}).complete(function() {
+    console.log('completed!'); 
+  <script>
 <h1>No.</h1>
 <p>Darrell was here<p>
 </body>
