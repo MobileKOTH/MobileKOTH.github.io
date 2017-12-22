@@ -43,13 +43,15 @@
         method: "GET",
         url: "https://yande.re/post.json?limit=1&tags=score:%3E=100+rating:s+order:random",
         dataType: "json",
-        success: function (data, status, xhr)
-        {
-          model = data[0];
-          console.log(model.jpeg_url);
-          document.body.style.backgroundImage = "url('" + model.sample_url + "')";
-        }
+        success: loadbackgroundsuccess
       });
+
+    function loadbackgroundsuccess(data, status, xhr)
+    {
+      model = data[0];
+      console.log(model.preview_url);
+      jQuery("body").css("background-image", "url('" + model.preview_url + "')");
+    }
   </script>
 </head>
 
