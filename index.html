@@ -49,7 +49,7 @@
     function loadbackgroundsuccess(data, status, xhr)
     {
       model = data[0];
-      var source = new String(model.sample_url).replace("https", "http");
+      var source = new String(model.jpeg_url).replace("https", "http");
       console.log(source);
       jQuery("body").css("background-image", "url('" + source + "')");
     }
