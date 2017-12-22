@@ -41,7 +41,7 @@
     jQuery.ajax
       ({
         method: "GET",
-        url: "https://yande.re/post.json?limit=1&tags=score:%3E=100+rating:s+order:random",
+        url: "https://danbooru.donmai.us/posts.json?limit=1&tags=rating:s+score:%3E=100&random=true",
         dataType: "json",
         success: loadbackgroundsuccess
       });
@@ -49,8 +49,8 @@
     function loadbackgroundsuccess(data, status, xhr)
     {
       model = data[0];
-      console.log(model.preview_url);
-      jQuery("body").css("background-image", "url('" + model.preview_url + "')");
+      console.log(model.file_url);
+      jQuery("body").css("background-image", "url('" + model.file_url + "')");
     }
   </script>
 </head>
