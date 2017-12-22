@@ -37,6 +37,19 @@
           }
         }
       });
+
+    jQuery.ajax
+      ({
+        method: "GET",
+        url: "https://yande.re/post.json?limit=1&tags=score:%3E=100+rating:s+order:random",
+        dataType: "json",
+        success: function (data, status, xhr)
+        {
+          model = data[0];
+          console.log(model.jpeg_url);
+          document.body.style.backgroundImage = "url('" + model.sample_url + "')";
+        }
+      });
   </script>
 </head>
 

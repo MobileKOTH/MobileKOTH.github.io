@@ -39,11 +39,6 @@ body
 	margin: 0 auto;
 	font-family: Arial, Helvetica, sans-serif;
 	max-width: 1440px;
-	background-image: url("images/orange_svgbg.svg");
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-size: 2880px;
-	background-position: center;
 }
 
 p
