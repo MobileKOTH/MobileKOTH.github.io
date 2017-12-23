@@ -41,7 +41,7 @@
     jQuery.ajax
       ({
         method: "GET",
-        url: "https://yande.re/post.json?limit=1&tags=score:%3E=100+rating:s+order:random",
+        url: "https://yande.re/post.json?limit=1&tags=score:>=149+rating:s+order:random",
         dataType: "json",
         success: loadbackgroundsuccess
       });
@@ -49,7 +49,7 @@
     function loadbackgroundsuccess(data, status, xhr)
     {
       model = data[0];
-      var source = new String(model.jpeg_url).replace("https", "http");
+      var source = new String(model.sample_url).replace("https", "http");
       console.log(source);
       jQuery("body").css("background-image", "url('" + source + "')");
     }
@@ -57,8 +57,8 @@
 </head>
 
 <body>
-  <h1 id="loadrank">Loading...</h1>
-  <table id="ranktable">
+  <h1 id="loadrank" style="text-align: center; margin: 0 33% 0 33%; border-radius: 10px">Loading...</h1>
+  <table id="ranktable" style="margin: auto">
   </table>
 </body>
 
