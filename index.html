@@ -5,6 +5,8 @@
   font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
 }
 #ranktable th {
   background-color : rgb(255,140,50);
@@ -12,9 +14,10 @@
   text-transform : uppercase;
 }
 #ranktable td {
-  background-color : rgb(255,140,50,0.5);
+  background-color : rgba(255,140,50,0.5);
   text-align : center;
 }
+tr:hover {background-color:rgb(255, 255, 255);}
 </style>
 <head>
   <title>MKOTH Test</title>
@@ -55,7 +58,12 @@
 
   </script>
 </head>
-
+<header>
+  Mobile King Of The Hill
+  <p>
+    The <b>biggest</b> competitive community of the popular game Bloons TD Battles Mobile
+  </p>
+</header>
 <body>
   <h1 id="loadrank">Loading...</h1>
   <table id="ranktable">
