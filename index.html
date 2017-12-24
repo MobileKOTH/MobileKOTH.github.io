@@ -14,21 +14,27 @@
       padding: 8px;
       border-left: 3px solid rgb(255,140,50);
     }
-    #ranktable th ,td {
+
+    #ranktable th,
+    td {
       border-bottom: 1px solid #ddd;
     }
+
     #ranktable th {
       background-color: rgb(255,140,50);
       padding-top: 6px;
       padding-bottom: 6px;
     }
+
     #ranktable tr {
       background-color: rgba(255, 140, 50, 0.2);
       text-align: center;
-      transition:0.15s;
+      transition: 0.15s;
     }
-    #ranktable tr:nth-child(even)
-    {background-color: rgb(255,255,255);}
+
+    #ranktable tr:nth-child(even) {
+      background-color: rgb(255, 255, 255);
+    }
 
     #ranktable tr:hover {
       background-color: rgb(255, 140, 50);
@@ -48,49 +54,51 @@
           var ranklist = data.response;
           console.log(ranklist);
           var table = jQuery("#ranktable");
-          var headerrow = jQuery("<th></th>").attr("id", "rank_table_header");
+          var tablehead = jQuery("<thead></thead>");
+          var headerrow = jQuery("<tr></tr>").attr("id", "rank_table_header");
           headerrow.append(jQuery("<th></th>").append("Rank"));
           headerrow.append(jQuery("<th></th>").append("Player Name"));
           headerrow.append(jQuery("<th></th>").append("Class"));
           headerrow.append(jQuery("<th></th>").append("Points"));
           headerrow.append(jQuery("<th></th>").append("ELO"));
-          table.append(headerrow);
-          for (var i in ranklist)
-          {
-            if (ranklist.hasOwnProperty(i))
+          tablehead.append(headerrow);
+          table.append(tablehead);
+            for (var i in ranklist)
             {
-              var element = ranklist[i];
-              var tablerow = jQuery("<tr></tr>").attr("id", element.Player_Name);
-              for (var key in element)
+              if (ranklist.hasOwnProperty(i))
               {
-                if (element.hasOwnProperty(key))
+                var element = ranklist[i];
+                var tablerow = jQuery("<tr></tr>").attr("id", element.Player_Name);
+                for (var key in element)
                 {
-                  var item = element[key];
-                  tablerow.append(jQuery("<td></td>").append(item).addClass(key));
+                  if (element.hasOwnProperty(key))
+                  {
+                    var item = element[key];
+                    tablerow.append(jQuery("<td></td>").append(item).addClass(key));
+                  }
                 }
+                table.append(tablerow);
               }
-              table.append(tablerow);
             }
+            jQuery("#loadrank").html("Rankings");
           }
-          jQuery("#loadrank").html("Rankings");
-        }
-      });
+        });
 
-  </script>
-</head>
+    </script>
+  </head>
 
-<body>
-  <header>
-    Mobile King Of The Hill
-    <p>
-      The
-      <b>biggest</b> competitive community of the popular game Bloons TD Battles Mobile
-    </p>
-  </header>
+  <body>
+    <header>
+      Mobile King Of The Hill
+      <p>
+        The
+        <b>biggest</b> competitive community of the popular game Bloons TD Battles Mobile
+      </p>
+    </header>
 
-  <h1 id="loadrank">Loading...</h1>
-  <table id="ranktable">
-  </table>
-</body>
+    <h1 id="loadrank">Loading...</h1>
+    <table id="ranktable">
+    </table>
+  </body>
 
-</html>
+  </html>
