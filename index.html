@@ -13,7 +13,8 @@
       width: 80%;
       padding: 8px;
       border-left: 5px solid rgb(255, 140, 50);
-      transition: 0.15s;
+      transition: 0.5s;
+      margin-left: 1000px;
     }
 
     #ranktable th,
@@ -40,6 +41,10 @@
 
     #ranktable tr:hover {
       background-color: rgb(255, 140, 50);
+    }
+
+    body {
+      overflow-x: hidden;
     }
   </style>
 
@@ -83,6 +88,7 @@
             }
           }
           jQuery("#loadrank").html("Rankings");
+          table.attr("style", "margin:0px");
         }
       });
 
