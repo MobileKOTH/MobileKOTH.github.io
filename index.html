@@ -10,27 +10,28 @@
   <link rel="shortcut icon" sizes="48x48" href="images/favicon-48px.png">
   <link rel="apple-touch-icon" href="images/favicon-180px.png">
   <link rel="icon" sizes="192x192" href="images/favicon-192px.png">
-  <link rel="stylesheet" href="styles.css">
 
   <style>
     #ranktable {
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       border-collapse: collapse;
-      width: 100%;
+      width: 80%;
       padding: 8px;
-      margin: 100px 200px;
+      border-left: 5px solid rgb(255,140,50);
     }
     #ranktable th ,td {
       border-bottom: 1px solid #ddd;
-    }
-    #ranktable tr {
-      background-color: rgba(255, 140, 50, 0.2);
-      text-align: center;
+      border-left: 1px solid #ddd;
     }
     #ranktable th {
       background-color: rgb(255,140,50);
       padding-top: 12px;
       padding-bottom: 12px;
+    }
+    #ranktable tr {
+      background-color: rgba(255, 140, 50, 0.2);
+      text-align: center;
+      transition:0.15s;
     }
     #ranktable tr:nth-child(even)
     {background-color: rgb(255,255,255);}
@@ -53,12 +54,12 @@
           var ranklist = data.response;
           console.log(ranklist);
           var table = jQuery("#ranktable");
-          var headerrow = jQuery("<tr></tr>").attr("id", "rank_table_header");
-          headerrow.append(jQuery("<td></td>").append("Rank"));
-          headerrow.append(jQuery("<td></td>").append("Player Name"));
-          headerrow.append(jQuery("<td></td>").append("Class"));
-          headerrow.append(jQuery("<td></td>").append("Points"));
-          headerrow.append(jQuery("<td></td>").append("ELO"));
+          var headerrow = jQuery("<th></th>").attr("id", "rank_table_header");
+          headerrow.append(jQuery("<th></th>").append("Rank"));
+          headerrow.append(jQuery("<th></th>").append("Player Name"));
+          headerrow.append(jQuery("<th></th>").append("Class"));
+          headerrow.append(jQuery("<th></th>").append("Points"));
+          headerrow.append(jQuery("<th></th>").append("ELO"));
           table.append(headerrow);
           for (var i in ranklist)
           {
