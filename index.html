@@ -18,22 +18,25 @@
       border-collapse: collapse;
       width: 100%;
       padding: 8px;
+      margin: 100px 200px;
+    }
+    #ranktable th ,td {
       border-bottom: 1px solid #ddd;
     }
-
+    #ranktable tr {
+      background-color: rgba(255, 140, 50, 0.2);
+      text-align: center;
+    }
     #ranktable th {
+      background-color: rgb(255,140,50);
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    #ranktable tr:nth-child(even)
+    {background-color: rgb(255,255,255);}
+
+    #ranktable tr:hover {
       background-color: rgb(255, 140, 50);
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    #ranktable td {
-      background-color: rgba(255, 140, 50, 0.5);
-      text-align: center;
-    }
-
-    tr:hover {
-      background-color: rgb(255, 255, 255);
     }
   </style>
 
