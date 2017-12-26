@@ -7,115 +7,12 @@
   <meta charset="utf-8">
 
   <style>
-    #ranktable {
-      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-      border-collapse: collapse;
-      width: 80%;
-      transition: 0.5s;
-      margin-left: 1000px;
-      border-left: 3px solid rgb(255, 140, 50);
-      position: center;
-    }
-    #ranktable th,
-    td {
-      border-bottom: 1px solid #ddd;
-    }
-    #ranktable th {
-      background-color: rgb(255, 140, 50);
-      padding-top: 12px;
-      padding-bottom: 12px;
-      size: 32px;
-    }
-    #ranktable tr {
-      background-color: rgba(255, 140, 50, 0.1);
-      text-align: center;
-      transition: 0.15s;
-      padding-top: 12px;
-      padding-bottom: 12px;
-    }
-    #ranktable td {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      size:20px;
-    }
-    #ranktable tr:nth-child(even) {
-      background-color: rgb(255, 255, 255);
-    }
-    #ranktable tr:hover {
-      background-color: rgb(255, 140, 50);
-    }
-    body {
-      overflow-x: hidden;
-    }
   </style>
-  <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
-  <script>
-    var isloading = true;
-    var loadinterval;
-    var rankingjsonurl = "https://script.google.com/macros/s/AKfycbzgXXIUc8PGq0-h-aZkZ9gfGBnBLi-BPn3JJ9cjV5B7ZbLu2eY/exec?resource=mkoth&item=ranking"
-    var request = jQuery.ajax
-      ({
-        method: "GET",
-        url: rankingjsonurl,
-        dataType: "json",
-        success: function (data)
-        {
-          var ranklist = data.response;
-          console.log(ranklist);
-          var table = jQuery("#ranktable");
-          var tablehead = jQuery("<thead></thead>");
-          var headerrow = jQuery("<tr></tr>").attr("id", "rank_table_header");
-          headerrow.append(jQuery("<th></th>").append("Rank"));
-          headerrow.append(jQuery("<th></th>").append("Player Name"));
-          headerrow.append(jQuery("<th></th>").append("Class"));
-          headerrow.append(jQuery("<th></th>").append("Points"));
-          headerrow.append(jQuery("<th></th>").append("ELO"));
-          tablehead.append(headerrow);
-          table.append(tablehead);
-          for (var i in ranklist)
-          {
-            if (ranklist.hasOwnProperty(i))
-            {
-              var element = ranklist[i];
-              var tablerow = jQuery("<tr></tr>").attr("id", element.Player_Name);
-              for (var key in element)
-              {
-                if (element.hasOwnProperty(key))
-                {
-                  var item = element[key];
-                  tablerow.append(jQuery("<td></td>").append(item).addClass(key));
-                }
-              }
-              table.append(tablerow);
-            }
-          }
-          isloading = false;
-          clearInterval(loadinterval);
-          jQuery("#loadrank").html("Rankings");
-          table.attr("style", "margin:0px");
-        },
-      });
-    window.onload = function ()
-    {
-      loadinterval = setInterval(function ()
-      {
-        var loadstring = $("#loadrank").html() + '.';
-        loadstring = loadstring.length > 10 ? loadstring.substring(0, 7) : loadstring;
-        $("#loadrank").html(loadstring);
-      }, 200);
-    }
-  </script>
 </head>
 <body>
   <header>
-    Mobile King Of The Hill
-    <p>
-      The
-      <b>biggest</b> competitive community of the popular game Bloons TD Battles Mobile
-    </p>
+   <img src="https://cdn.discordapp.com/attachments/270838709287387136/395226844863004672/20171226_225015.jpg" alt= Banner>
   </header>
-  <h1 id="loadrank">Loading</h1>
-  <table id="ranktable">
-  </table>
+   
 </body>
 </html>
