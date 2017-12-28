@@ -6,9 +6,14 @@
   <link rel="shortcut icon" sizes="192x192" href="images/MKOTH Icon 192px.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {margin:0;}
-
+  <style> 
+header {
+    width: 100%;
+    margin: auto;
+}
+body {
+    margin: auto;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -16,20 +21,23 @@ ul {
     overflow: hidden;
     background-color: #333;
     position: fixed;
-    top: 0;
+    top: 330px;
     width: 100%;
 }
 
 li {
     float:left;
+    margin:auto;
 }
 
 li a {
+    float: center;
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    margin:auto;
 }
 
 li a:hover:not(.active) {
@@ -45,13 +53,14 @@ li a:hover:not(.active) {
 <body>
   <header>
     <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%">
-  </header>
-  <ul>
-      <li><a class="active" href="#home">Home</a></li>
-      <li><a href="#rankings">rankings</a></li>
-      <li><a href="#ranking system">ranking system</a></li>
-      <li><a href="#sign up">sign up</a></li>
+    <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#rankings">rankings</a></li>
+            <li><a href="#ranking system">ranking system</a></li>
+            <li><a href="#sign up">sign up</a></li>
     </ul>
+  </header>
+ 
 </body>
 
 </html>
