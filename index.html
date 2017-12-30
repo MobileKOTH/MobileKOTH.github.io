@@ -7,16 +7,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style> 
+header {
+  background-color: lightgray;
+}
 body{
     margin:auto;
 }
 ul {
     list-style-type:none;
     position:absolute;
-    left:50%;top:333px;
+    left:50%;top:337px;
     margin-left:-375px; /* negative margin equal to half the width */
     width:750px;
-    background-color: #333;
 }
 
 li {
@@ -25,24 +27,24 @@ li {
 
 li a {
     display: block;
-    color: white;
+    background-color: lightgray;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     width: 150px;
-}
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color:black;
+    border: 1px solid black;
 
-li a:hover:not(.active) {
-    background-color: #111;
 }
-
-.active {
-    background-color: #4CAF50;
+li a:hover:not(.active){
+    background-color: rgb(255,140,50);
 }
 div {
     top:300px;
     width: 100%;
-    background-color: #333;
+    padding: 1px;
 }
   </style>
 </head>
@@ -51,10 +53,12 @@ div {
   <header>
     <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%;">
     <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#rankings">rankings</a></li>
-            <li><a href="#ranking system">ranking system</a></li>
+        <b>
+            <li><a href="https://mobilekoth.github.io/"></a></li>
+            <li><a href='http://MobileKoth.github.io/rankings">rankings</a></li>
+            <li><a href="#ranking system>ranking system></a></li>
             <li><a href="#sign up">sign up</a></li>
+        </b>
     </ul>
     <div>
      <p>  hi  </p> 
