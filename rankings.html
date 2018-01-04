@@ -7,6 +7,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+
+header {
+  background-color: lightgray;
+}
+body{
+    margin:auto;
+    background-color: white;
+}
+ul {
+    list-style-type:none;
+    position:absolute;
+    left:50%;top:337px;
+    margin-left:-375px; /* negative margin equal to half the width */
+    width:750px;
+}
+
+li {
+    float:left;
+}
+
+li a {
+    display: block;
+    background-color: lightgray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 150px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color:black;
+    border: 1px solid black;
+
+}
+li a:hover:not(.active){
+    background-color: rgb(255,140,50);
+}
+div {
+    top:300px;
+    width: 100%;
+    padding: 1px;
+}
     #ranktable {
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       border-collapse: collapse;
@@ -110,11 +151,19 @@
 </head>
 <body>
   <header>
-    Mobile King Of The Hill
-    <p>
-      The
-      <b>biggest</b> competitive community of the popular game Bloons TD Battles Mobile
-    </p>
+    <header>
+      <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%;">
+      <ul>
+          <b>
+              <li><a href="https://mobilekoth.github.io/">home</a></li>
+              <li><a href="http://MobileKoth.github.io/rankings">rankings</a></li>
+              <li><a href="#ranking system>ranking system></a></li>
+              <li><a href="#sign up">sign up</a></li>
+          </b>
+      </ul>
+      <div>
+       <p>  hi  </p> 
+      </div>
   </header>
   <h1 id="loadrank">Loading</h1>
   <table id="ranktable">
