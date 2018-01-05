@@ -7,48 +7,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-header {
-  background-color: lightgray;
-}
-body{
-    overflow-x: hidden;
-    margin: auto;
-}
-ul {
-    list-style-type:none;
-    position:absolute;
-    left:50%;top:331px;
-    margin-left:-375px; /* negative margin equal to half the width */
-    width:750px;
-}
-
-li {
-    float:left;
-}
-
-li a {
-    display: block;
-    background-color: lightgray;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    width: 150px;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color:black;
-    border: 1px solid black;
-
-}
-li a:hover:not(.active){
-    background-color: rgb(255,140,50);
-}
-
     #ranktable {
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       border-collapse: collapse;
       width: 80%;
-      margin-left: 1000px;
       transition: 0.5s;
+      margin-left: 1000px;
+      border-left: 3px solid rgb(255, 140, 50);
       position: center;
     }
     #ranktable th,
@@ -57,12 +22,9 @@ li a:hover:not(.active){
     }
     #ranktable th {
       background-color: rgb(255, 140, 50);
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding-top: 12px;
+      padding-bottom: 12px;
       size: 32px;
-      text-transform: uppercase;
-      text-shadow: 2px 1px gray;
-      font-size: 24px;
     }
     #ranktable tr {
       background-color: rgba(255, 140, 50, 0.1);
@@ -85,234 +47,47 @@ li a:hover:not(.active){
     body {
       overflow-x: hidden;
     }
-    
-    #wrapper {
 
-padding-left: 0;
-
--webkit-transition: all 0.5s ease;
-
--moz-transition: all 0.5s ease;
-
--o-transition: all 0.5s ease;
-
-transition: all 0.5s ease;
-
+    header {
+  background-color: lightgray;
 }
 
-
-
-#wrapper.toggled {
-
-padding-left:150px;
-
+body{
+    margin:auto;
+}
+ul {
+    list-style-type:none;
+    position:absolute;
+    left:70%;top:22px;
+    margin-left:-375px; /* negative margin equal to half the width */
+    width:750px;
 }
 
-
-
-#sidebar-wrapper {
-
-z-index: 1000;
-
-position: fixed;
-
-left: 50px;
-
-width: 0;
-
-height: 100%;
-
-margin-left: -50px;
-
-overflow-y: auto;
-
-background: lightgray;
-
--webkit-transition: all 0.5s ease;
-
--moz-transition: all 0.5s ease;
-
--o-transition: all 0.5s ease;
-
-transition: all 0.5s ease;
-
+li {
+    float:left;
 }
 
-
-
-#wrapper.toggled #sidebar-wrapper {
-
-width: 250px;
-
-}
-
-
-
-#page-content-wrapper {
-
-width: 100%;
-
-position: absolute;
-
-padding: 15px;
+li a {
+    display: block;
+    background-color: lightgray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 150px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color:black;
+    border: 1px solid lightgray;
 
 }
-
-
-
-#wrapper.toggled #page-content-wrapper {
-
-position: absolute;
-
-margin-right: -150px;
-
+li a:hover:not(.active){
+    background-color: rgb(255,140,50);
 }
-
-
-
-
-
-/* Sidebar Styles */
-
-
-
-.sidebar-nav {
-
-position: absolute;
-
-top: 0;
-
-width: 200px;
-
-margin: 0;
-
-padding: 0;
-
-list-style: none;
-
+div {
+    top:300px;
+    width: 100%;
+    padding: 1px;
 }
-
-
-
-.sidebar-nav li {
-
-text-indent: 20px;
-
-line-height: 40px;
-
-margin: auto;
-}
-
-
-
-.sidebar-nav li a {
-
-display: block;
-
-text-decoration: none;
-
-color: #999999;
-
-margin: auto;
-
-}
-
-
-
-.sidebar-nav li a:hover {
-
-text-decoration: none;
-
-color: #fff;
-
-background: rgba(255, 255, 255, 0.2);
-
-}
-
-
-
-.sidebar-nav li a:active, .sidebar-nav li a:focus {
-
-text-decoration: none;
-
-}
-
-
-
-.sidebar-nav>.sidebar-brand {
-
-height: 65px;
-
-font-size: 18px;
-
-line-height: 60px;
-
-}
-
-
-
-.sidebar-nav>.sidebar-brand a {
-
-color: #999999;
-
-}
-
-
-
-.sidebar-nav>.sidebar-brand a:hover {
-
-color: #fff;
-
-background: none;
-
-}
-
-
-
-@media(min-width:768px) {
-
-#wrapper {
-
-  padding-left: 0;
-
-}
-
-#wrapper.toggled {
-
-  padding-left: 250px;
-
-}
-
-#sidebar-wrapper {
-
-  width: 0;
-
-}
-
-#wrapper.toggled #sidebar-wrapper {
-
-  width: 350px;
-
-}
-
-#page-content-wrapper {
-
-  padding: 20px;
-
-  position: relative;
-
-}
-
-#wrapper.toggled #page-content-wrapper {
-
-  position: relative;
-
-  margin-right: 0;
-
-}
-
-}
-
   </style>
   <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
   <script>
@@ -373,120 +148,22 @@ background: none;
   </script>
 </head>
 <body>
-    <header>
-
-      <div id="wrapper">
-
-        <!-- Sidebar -->
-
-        <div id="sidebar-wrapper">
-
-            <ul class="sidebar-nav">
-
-                <li class="sidebar-brand">
-
-                    <a href="#">
-
-                        Start Bootstrap
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a href="#">Dashboard</a>
-
-                </li>
-
-                <li>
-
-                    <a href="#">Shortcuts</a>
-
-                </li>
-
-                <li>
-
-                    <a href="#">Overview</a>
-
-                </li>
-
-                <li>
-
-                    <a href="#">Events</a>
-
-                </li>
-
-                <li>
-
-                    <a href="#">About</a>
-
-                </li>
-
-                <li>
-
-                    <a href="#">Services</a>
-
-                </li>
-
-                <li>
-
-                    <a href="#">Contact</a>
-
-                </li>
-
-            </ul>
-
-        </div>
-
-        <!-- /#sidebar-wrapper -->
-
-        <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%;">
-
-        <!-- Page Content -->
-
-        <div id="page-content-wrapper">
-
-            <div class="container-fluid">
-
-                <h1>Simple Sidebar</h1>
-
-                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
-
-            </div>
-
-        </div>
-
-        <!-- /#page-content-wrapper -->
-
-
-
-    </div>
-
-    <!-- /#wrapper -->
-
-        <!-- Bootstrap core JavaScript -->
-
-        <script src="vendor/jquery/jquery.min.js"></script>
-
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    
-    
-    
-        <!-- Menu Toggle Script -->
-    
-        <script>
-    
-        $("#menu-toggle").click(function(e) {
-    
-            e.preventDefault();
-    
-            $("#wrapper").toggleClass("toggled");
-    
-        });
-    
-        </script>
+  <header>
+    <h1>Mobile King Of The Hill </h1>
+    <p>
+      The
+      <b>biggest</b> competitive community of the popular game Bloons TD Battles Mobile
+    </p>
   </header>
+  <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%;">
+  <ul>
+      <b>
+          <li><a href="https://mobilekoth.github.io/">home</a></li>
+          <li><a href="http://MobileKoth.github.io/rankings">rankings</a></li>
+          <li><a href="#ranking system">ranking system</a></li>
+          <li><a href="#sign up">sign up</a></li>
+      </b>
+  </ul>
   <h1 id="loadrank">Loading</h1>
   <table id="ranktable">
   </table>
