@@ -11,8 +11,8 @@ header {
   background-color: lightgray;
 }
 body{
-    margin:auto;
-    background-color: white;
+    overflow-x: hidden;
+    margin: auto;
 }
 ul {
     list-style-type:none;
@@ -86,54 +86,233 @@ li a:hover:not(.active){
       overflow-x: hidden;
     }
     
-@media only screen and (min-width:500px) {
-/* Style The Dropdown Button */
-   .dropbtn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-   }
+    #wrapper {
 
-/* The container <div> - needed to position the dropdown content */
-   .dropdown {
-      position: relative;
-      display: inline-block;
-   }
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-      float: left;
-      display:none;
-      position: fixed;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-   }
-/* Links inside the dropdown */
-  .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-   }
+padding-left: 0;
 
-/* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
+-webkit-transition: all 0.5s ease;
 
-/* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-      display: block;
-  }
+-moz-transition: all 0.5s ease;
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-      background-color: #3e8e41;
-  }
+-o-transition: all 0.5s ease;
+
+transition: all 0.5s ease;
+
 }
+
+
+
+#wrapper.toggled {
+
+padding-left:150px;
+
+}
+
+
+
+#sidebar-wrapper {
+
+z-index: 1000;
+
+position: fixed;
+
+left: 50px;
+
+width: 0;
+
+height: 100%;
+
+margin-left: -50px;
+
+overflow-y: auto;
+
+background: lightgray;
+
+-webkit-transition: all 0.5s ease;
+
+-moz-transition: all 0.5s ease;
+
+-o-transition: all 0.5s ease;
+
+transition: all 0.5s ease;
+
+}
+
+
+
+#wrapper.toggled #sidebar-wrapper {
+
+width: 250px;
+
+}
+
+
+
+#page-content-wrapper {
+
+width: 100%;
+
+position: absolute;
+
+padding: 15px;
+
+}
+
+
+
+#wrapper.toggled #page-content-wrapper {
+
+position: absolute;
+
+margin-right: -150px;
+
+}
+
+
+
+
+
+/* Sidebar Styles */
+
+
+
+.sidebar-nav {
+
+position: absolute;
+
+top: 0;
+
+width: 200px;
+
+margin: 0;
+
+padding: 0;
+
+list-style: none;
+
+}
+
+
+
+.sidebar-nav li {
+
+text-indent: 20px;
+
+line-height: 40px;
+
+margin: auto;
+}
+
+
+
+.sidebar-nav li a {
+
+display: block;
+
+text-decoration: none;
+
+color: #999999;
+
+margin: auto;
+
+}
+
+
+
+.sidebar-nav li a:hover {
+
+text-decoration: none;
+
+color: #fff;
+
+background: rgba(255, 255, 255, 0.2);
+
+}
+
+
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+
+text-decoration: none;
+
+}
+
+
+
+.sidebar-nav>.sidebar-brand {
+
+height: 65px;
+
+font-size: 18px;
+
+line-height: 60px;
+
+}
+
+
+
+.sidebar-nav>.sidebar-brand a {
+
+color: #999999;
+
+}
+
+
+
+.sidebar-nav>.sidebar-brand a:hover {
+
+color: #fff;
+
+background: none;
+
+}
+
+
+
+@media(min-width:768px) {
+
+#wrapper {
+
+  padding-left: 0;
+
+}
+
+#wrapper.toggled {
+
+  padding-left: 250px;
+
+}
+
+#sidebar-wrapper {
+
+  width: 0;
+
+}
+
+#wrapper.toggled #sidebar-wrapper {
+
+  width: 350px;
+
+}
+
+#page-content-wrapper {
+
+  padding: 20px;
+
+  position: relative;
+
+}
+
+#wrapper.toggled #page-content-wrapper {
+
+  position: relative;
+
+  margin-right: 0;
+
+}
+
+}
+
   </style>
   <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
   <script>
@@ -195,23 +374,118 @@ li a:hover:not(.active){
 </head>
 <body>
     <header>
-      <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%;">
-      <ul>
-          <b>
-              <li><a href="https://mobilekoth.github.io/">home</a></li>
-              <li><a href="http://MobileKoth.github.io/rankings">rankings</a></li>
-              <li><a href="#ranking system">ranking system</a></li>
-              <li><a href="#sign up">sign up</a></li>
-          </b>
-      </ul>
-      <div class="dropdown">
-      <button class="dropbtn">Dropdown</button>
-      <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-      </div>
-      </div>
+
+      <div id="wrapper">
+
+        <!-- Sidebar -->
+
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+
+                <li class="sidebar-brand">
+
+                    <a href="#">
+
+                        Start Bootstrap
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#">Dashboard</a>
+
+                </li>
+
+                <li>
+
+                    <a href="#">Shortcuts</a>
+
+                </li>
+
+                <li>
+
+                    <a href="#">Overview</a>
+
+                </li>
+
+                <li>
+
+                    <a href="#">Events</a>
+
+                </li>
+
+                <li>
+
+                    <a href="#">About</a>
+
+                </li>
+
+                <li>
+
+                    <a href="#">Services</a>
+
+                </li>
+
+                <li>
+
+                    <a href="#">Contact</a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
+        <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%;">
+
+        <!-- Page Content -->
+
+        <div id="page-content-wrapper">
+
+            <div class="container-fluid">
+
+                <h1>Simple Sidebar</h1>
+
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+
+            </div>
+
+        </div>
+
+        <!-- /#page-content-wrapper -->
+
+
+
+    </div>
+
+    <!-- /#wrapper -->
+
+        <!-- Bootstrap core JavaScript -->
+
+        <script src="vendor/jquery/jquery.min.js"></script>
+
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    
+    
+        <!-- Menu Toggle Script -->
+    
+        <script>
+    
+        $("#menu-toggle").click(function(e) {
+    
+            e.preventDefault();
+    
+            $("#wrapper").toggleClass("toggled");
+    
+        });
+    
+        </script>
   </header>
   <h1 id="loadrank">Loading</h1>
   <table id="ranktable">
