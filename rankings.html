@@ -7,6 +7,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+@font-face { font-family: billy; src: url('billy-argel_secret-agent-personal-use.zip'); }
+@font-face { font-family: blaze; src: url('blazed.zip');}
+
+    h1 {
+      font-family: "billy";
+    }
+    
     #ranktable {
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       border-collapse: collapse;
@@ -52,7 +59,7 @@
     }
 
     header {
-      background-color: lightgray;
+      background-color: white;
     }
 
     #comnavbar {
@@ -60,7 +67,7 @@
       position:absolute;
       left:70%;top:22px;
       margin-left:-375px; /* negative margin equal to half the width */
-      width:750px;
+      width:850px;
     }
 
     li {
@@ -69,15 +76,15 @@
 
     li a {
       display: block;
-      background-color: lightgray;
+      background-color: white;
       text-align: center;
-      padding: 14px 16px;
+      padding: 13px 15px;
       text-decoration: none;
-      width: 150px;
-      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-      font-size: 20px;
+      width: 170px;
+      font-family: "blaze", Arial, Helvetica, sans-serif;
+      font-size: 22px;
       color:black;
-      border: 1px solid lightgray;
+      border-left: 1px solid lightgray;
 
     }
     li a:hover:not(.active){
@@ -91,8 +98,25 @@
     .button {
       display: none;
     }
+ 
+    .pushy-content {
+      display: hidden;
+    }
+
+    .pushyul , .menu-btn {
+      display: hidden;
+    }
+  
+    div{
+      display: none;
+    }
 
     @media only screen and (max-width: 768px) {
+      
+      div {
+        display: block
+      }
+
       #comnavbar {
         display: none;
       }  
@@ -632,7 +656,7 @@ transform: translateY(-50%) rotate(90deg);
 </head>
 <body>
   <header>
-    <h1>Mobile King Of The Hill </h1>
+    <h1>MK<span style="font-family: blaze;">O</span>TH</h1>
     <p>
       The
       <b>biggest</b> competitive community of the popular game Bloons TD Battles Mobile
