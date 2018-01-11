@@ -10,11 +10,29 @@
 @font-face { font-family: billy; src:local('Billy'), url('Billy.ttf'); }
 @font-face { font-family: blaze; src:local('Blazed'), url('Blazed.ttf');}
 
+    .mkothpic{
+      z-index: -1;
+      border-radius: 10px;
+    }
+    
     h1 {
       font-family: "Georgia",serif;
       font-weight: 700;
-      font-style: italic, oblique;
       font-size: 64;
+      color: rgb(255, 140, 50);
+    }
+
+    p {
+      font-family: "Georgia",serif;
+    }
+
+    .mkothwords{
+      position: relative;
+      left: 10%;
+      top:-50px;
+    }
+    header{
+      top: 1%;
     }
 
     #ranktable {
@@ -70,7 +88,7 @@
       position:absolute;
       left:70%;top:22px;
       margin-left:-375px; /* negative margin equal to half the width */
-      width:850px;
+      width:800px;
     }
 
     li {
@@ -81,10 +99,10 @@
       display: block;
       background-color: white;
       text-align: center;
-      padding: 13px 15px;
+      padding: 11px 14px;
       text-decoration: none;
-      width: 170px;
-      font-family: "blaze", Arial, Helvetica, sans-serif;
+      width: 150px;
+      font-family: "Georgia", Arial, Helvetica, sans-serif;
       font-size: 22px;
       color:black;
       border-left: 1px solid lightgray;
@@ -110,12 +128,16 @@
       display: hidden;
     }
   
-    div{
+    .pushy.pushy-left, #container{
       display: none;
     }
 
     @media only screen and (max-width: 768px) {
       
+      .pushy.pushy-left, #container{
+      display: block;
+    }
+
       div {
         display: block
       }
@@ -659,11 +681,16 @@ transform: translateY(-50%) rotate(90deg);
 </head>
 <body>
   <header>
-    <h1>MKOTH</h1>
-    <p>
+  <img src="https://cdn.discordapp.com/attachments/270838709287387136/401040000743112704/FB_IMG_1515685779372.jpg" alt="mkoth pic" class="mkothpic" style='width:7%;'>
+    <div class="mkothwords">
+  <h1>
+        <b><i>Mobile KOTH</i></b>
+    </h1>  
+      <p><i>
       The
-      <b>biggest</b> competitive community of the popular game Bloons TD Battles Mobile
+      <b>biggest</b> competitive community of the popular <br> game Bloons TD Battles Mobile since 2013</i>
     </p>
+  </div>
   </header>
   <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%;">
   <ul id="comnavbar">
@@ -700,7 +727,7 @@ transform: translateY(-50%) rotate(90deg);
     <!-- Menu Button -->
     <button class="menu-btn">&#9776; Menu</button>
 </div>
-  <h1 id="loadrank">Loading</h1>
+  <h2 id="loadrank">Loading</h2>
   <table id="ranktable">
   </table>
   <footer>
