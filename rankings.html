@@ -142,43 +142,32 @@ padding: 0;
 /* Container */
 
 #container {
-
-position: relative;
-
-padding: 20px 40px;
-
-padding-top: 80px;
-
+  position: relative;
 }
-
 
 
 /* Menu Button */
 
 .menu-btn {
-
-width: 100px;
-
-padding: 10px;
-
-margin-bottom: 30px;
-
-background: #000;
-
-color: #FFF;
-
-text-align: center;
-
-cursor: pointer;
-
-border: 0px;
+  position: absolute;
+  top: -75px;
+  left: 80%;
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 30px;
+  background: white;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid rgb(255, 140, 50);
+  font-family: 'Arial',sans-serif;
+  font-weight: 500;
 
 }
 
 .menu-btn:hover {
-
-opacity: 0.6;
-
+  background-color: rgb(255, 140, 50);
+  color: white;
 }
 
 
@@ -665,7 +654,14 @@ transform: translateY(-50%) rotate(90deg);
   <header>
 
   <img src="https://cdn.discordapp.com/attachments/270838709287387136/401427004257468426/20180113_012725.png" alt="mkothpicandwords" class="mkothpicandwords">
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
 
+<!-- Your Content -->
+<div id="container">
+    <!-- Menu Button -->
+    <button class="menu-btn">&#9776; Menu</button>
+</div>
   </header>
   <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%;">
   <ul id="comnavbar">
@@ -694,14 +690,7 @@ transform: translateY(-50%) rotate(90deg);
     </div>
 </nav>
 
-<!-- Site Overlay -->
-<div class="site-overlay"></div>
 
-<!-- Your Content -->
-<div id="container">
-    <!-- Menu Button -->
-    <button class="menu-btn">&#9776; Menu</button>
-</div>
   <h2 id="loadrank">Loading</h2>
   <table id="ranktable">
   </table>
