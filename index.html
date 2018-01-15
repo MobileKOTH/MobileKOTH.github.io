@@ -7,64 +7,1006 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style> 
-header {
-  background-color: lightgray;
-}
-body{
-    margin:auto;
-}
-ul {
-    list-style-type:none;
-    position:absolute;
-    left:50%;top:337px;
-    margin-left:-375px; /* negative margin equal to half the width */
-    width:750px;
+    .mkothpicandwords{
+      width: 35%;
+    }
+
+    body {
+      overflow-x: hidden;
+      margin: auto;
+    }
+
+    header {
+      background-color: white;
+    }
+
+    #comnavbar {
+      list-style-type:none;
+      position:absolute;
+      left:38%;top:22px;
+      width: 70%;
+    }
+
+    li {
+      float:left;
+    }
+
+    li a {
+      display: block;
+      background-color: white;
+      text-align: center;
+      padding: 11px 14px;
+      text-decoration: none;
+      width: 150px;
+      font-family: "Georgia", Arial, Helvetica, sans-serif;
+      font-size: 22px;
+      color:black;
+      border-left: 1px solid lightgray;
+
+    }
+    li a:hover:not(.active){
+      background-color: rgb(255,140,50);
+    }
+
+    #mobilenavbar {
+      display: none;
+    }
+
+    .button {
+      display: none;
+    }
+ 
+    .pushy-content {
+      display: hidden;
+    }
+
+    .pushyul , .menu-btn {
+      display: hidden;
+    }
+  
+    .pushy.pushy-left, #container{
+      display: none;
+    }
+
+    @media only screen and (max-width: 768px) {
+
+      .mkothpicandwords {
+        width: 70%;
+      }
+      
+      .pushy.pushy-left, #container{
+      display: block;
+    }
+
+      div {
+        display: block
+      }
+
+      #comnavbar {
+        display: none;
+      }  
+/* Lists */
+
+.pushyul , .pushysubmenuul {
+
+margin: 0;
+
+padding: 0;
+
 }
 
-li {
-    float:left;
+
+
+/* Container */
+
+#container {
+  position: relative;
 }
 
-li a {
-    display: block;
-    background-color: lightgray;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    width: 150px;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color:black;
-    border: 1px solid black;
+
+/* Menu Button */
+
+.menu-btn {
+  position: absolute;
+  top: -55px;
+  left: 73%;
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 30px;
+  background: white;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid rgb(255, 140, 50);
+  font-family: 'Arial',sans-serif;
+  font-weight: 500;
 
 }
-li a:hover:not(.active){
-    background-color: rgb(255,140,50);
+
+.menu-btn:hover {
+  background-color: rgb(255, 140, 50);
+  color: white;
 }
-div {
-    top:300px;
-    width: 100%;
-    padding: 1px;
+
+
+
+/* Header */
+
+.site-header {
+
+position: fixed;
+
+background: #000;
+
+color: #FFF;
+
+width: 100%;
+
+padding: 20px 0;
+
+text-align: center;
+
+z-index: 9998;
+
 }
+
+
+
+/* Footer */
+
+.site-footer {
+
+position: relative;
+
+border-top: 1px solid #EEE;
+
+color: #999;
+
+padding: 10px;
+
+font-size: 0.8em;
+
+text-align: center;
+
+}
+
+
+.pushy {
+
+position: fixed;
+
+width: 200px;
+
+height: 100%;
+
+top: 0;
+
+z-index: 9999;
+
+background-color: rgba(255, 255, 255, 0.822);
+
+overflow: auto;
+
+-webkit-overflow-scrolling: touch;
+
+/* enables momentum scrolling in iOS overflow elements */
+
+}
+
+.pushy a {
+
+display: block;
+
+color: black;
+
+padding: 15px 30px;
+
+text-decoration: none;
+
+}
+
+.pushy a:hover {
+
+color: #FFF;
+
+background-color: rgb(255, 140, 50)
+
+}
+
+.pushy pushyul:first-child {
+
+margin-top: 10px;
+
+}
+
+.pushy pushysubmenuul:first-child {
+
+margin-top: 10px;
+
+}
+
+.pushy.pushy-left {
+
+left: 0;
+
+}
+
+.pushy.pushy-right {
+
+right: 0;
+
+}
+
+.pushy li a {
+  list-style-type: none;
+  background: transparent;
+}
+
+.pushy-content {
+
+visibility: hidden;
+
+}
+
+
+
+/* Menu Movement */
+
+.pushy-left {
+
+-webkit-transform: translate3d(-200px, 0, 0);
+
+-ms-transform: translate3d(-200px, 0, 0);
+
+transform: translate3d(-200px, 0, 0);
+
+}
+
+
+
+.pushy-open-left #container,
+
+.pushy-open-left .push {
+
+-webkit-transform: translate3d(200px, 0, 0);
+
+-ms-transform: translate3d(200px, 0, 0);
+
+transform: translate3d(200px, 0, 0);
+
+}
+
+
+
+.pushy-right {
+
+-webkit-transform: translate3d(200px, 0, 0);
+
+-ms-transform: translate3d(200px, 0, 0);
+
+transform: translate3d(200px, 0, 0);
+
+}
+
+
+
+.pushy-open-right #container,
+
+.pushy-open-right .push {
+
+-webkit-transform: translate3d(-200px, 0, 0);
+
+-ms-transform: translate3d(-200px, 0, 0);
+
+transform: translate3d(-200px, 0, 0);
+
+}
+
+
+
+.pushy-open-left .pushy,
+
+.pushy-open-right .pushy {
+
+-webkit-transform: translate3d(0, 0, 0);
+
+-ms-transform: translate3d(0, 0, 0);
+
+transform: translate3d(0, 0, 0);
+
+}
+
+.pushy-open-left .pushy-content,
+
+.pushy-open-right .pushy-content {
+
+visibility: visible;
+
+}
+
+
+
+/* Menu Transitions */
+
+#container,
+
+.pushy,
+
+.push {
+
+transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+
+}
+
+
+
+.pushy-content {
+
+transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+
+}
+
+
+
+/* Site Overlay */
+
+.site-overlay {
+
+display: none;
+
+}
+
+
+
+.pushy-open-left .site-overlay,
+
+.pushy-open-right .site-overlay {
+
+display: block;
+
+position: fixed;
+
+top: 0;
+
+right: 0;
+
+bottom: 0;
+
+left: 0;
+
+z-index: 9998;
+
+background-color: rgba(0, 0, 0, 0.5);
+
+-webkit-animation: fade 500ms;
+
+animation: fade 500ms;
+
+}
+
+
+
+@keyframes fade {
+
+0% {
+
+  opacity: 0;
+
+}
+
+100% {
+
+  opacity: 1;
+
+}
+
+}
+
+@-webkit-keyframes fade {
+
+0% {
+
+  opacity: 0;
+
+}
+
+100% {
+
+  opacity: 1;
+
+}
+
+}
+
+/* Submenu Appearance */
+
+
+
+.pushy-submenu .pushysubmenuul {
+
+padding-left: 15px;
+
+transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+}
+
+.pushy-submenu .pushysubmenuul .pushy-link {
+
+transition: opacity 0.2s ease-in-out;
+
+}
+
+.pushy-submenu button {
+
+width: 100%;
+
+color: black;
+
+padding: 15px 30px;
+
+text-align: left;
+
+background: transparent;
+
+border: 0;
+
+}
+
+.pushy-submenu button:hover {
+
+color: #FFF;
+
+background-color: rgb(255, 140, 50)
+}
+
+.pushy-submenu > a,
+
+.pushy-submenu > button {
+
+position: relative;
+
+}
+
+.pushy-submenu > a::after,
+
+.pushy-submenu > button::after {
+
+content: '';
+
+display: block;
+
+height: 11px;
+
+width: 8px;
+
+position: absolute;
+
+top: 50%;
+
+right: 15px;
+
+list-style-type: none;
+
+background: url("../img/arrow.svg") no-repeat;
+
+-webkit-transform: translateY(-50%);
+
+-ms-transform: translateY(-50%);
+
+transform: translateY(-50%);
+
+transition: transform 0.2s;
+
+}
+
+
+
+/* Submenu Movement */
+
+.pushy-submenu-closed .pushysubmenuul {
+
+max-height: 0;
+
+overflow: hidden;
+
+visibility: hidden;
+
+}
+
+.pushy-submenu-closed .pushy-link {
+
+opacity: 0;
+
+}
+
+
+
+
+.pushy-submenu-open .pushysubmenuul {
+
+max-height: 1000px;
+
+visibility: visible;
+
+}
+
+.pushy-submenu-open .pushy-link {
+
+opacity: 1;
+
+}
+
+.pushy-submenu-open a::after,
+
+.pushy-submenu-open button::after {
+
+-webkit-transform: translateY(-50%) rotate(90deg);
+
+-ms-transform: translateY(-50%) rotate(90deg);
+
+transform: translateY(-50%) rotate(90deg);
+
+}
+    }
   </style>
 </head>
-
 <body>
   <header>
-    <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%;">
-    <ul>
-        <b>
-            <li><a href="https://mobilekoth.github.io/">home</a></li>
-            <li><a href="http://MobileKoth.github.io/rankings">rankings</a></li>
-            <li><a href="#ranking system">ranking system</a></li>
-            <li><a href="#sign up">sign up</a></li>
-        </b>
-    </ul>
-    <div>
-     <p>  hi  </p> 
-    </div>
+
+  <img src="https://cdn.discordapp.com/attachments/270838709287387136/401427004257468426/20180113_012725.png" alt="mkothpicandwords" class="mkothpicandwords">
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
+
+<!-- Your Content -->
+<div id="container">
+    <!-- Menu Button -->
+    <button class="menu-btn">&#9776; Menu</button>
+</div>
   </header>
+  <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%;">
+  <ul id="comnavbar">
+      <b>
+          <li><a href="https://mobilekoth.github.io/">Home</a></li>
+          <li><a href="http://mobileKoth.github.io/rankings">Rankings</a></li>
+          <li><a href="http://mobilekoth.github.io/rankingsysem">Ranking System</a></li>
+          <li><a href="http://mobilekoth.github.io/signups">Sign Ups</a></li>
+      </b>
+  </ul>
+  <nav class="pushy pushy-left">
+    <div class="pushy-content">
+        <ul class="pushyul">
 
+            <li class="pushy-link"><a href="http://mobilekoth.github.io">Home :D</a></li>
+            <li class="pushy-link"><a href="http://mobilekoth.github.io/rankings">Rankings :0</a></li>
+            <li class="pushy-link"><a href="http://mobilekoth.github.io/rankingsystem">Ranking System</a></li>
+            <li class="pushy-link"><a href="http://mobilekot.github.io/signups">Sign ups</a></li>
+        </ul>
+    </div>
+</nav>
+
+  <footer>
+    <script>
+      
+    (function ($) {
+
+var pushy = $('.pushy'), //menu css class
+
+  body = $('body'),
+
+  container = $('#container'), //container css class
+
+  push = $('.push'), //css class to add pushy capability
+
+  pushyLeft = 'pushy-left', //css class for left menu position
+
+  pushyOpenLeft = 'pushy-open-left', //css class when menu is open (left position)
+
+  pushyOpenRight = 'pushy-open-right', //css class when menu is open (right position)
+
+  siteOverlay = $('.site-overlay'), //site overlay
+
+  menuBtn = $('.menu-btn, .pushy-link'), //css classes to toggle the menu
+
+  menuBtnFocus = $('.menu-btn'), //css class to focus when menu is closed w/ esc key
+
+  menuLinkFocus = $(pushy.data('focus')), //focus on link when menu is open
+
+  menuSpeed = 200, //jQuery fallback menu speed
+
+  menuWidth = pushy.width() + 'px', //jQuery fallback menu width
+
+  submenuClass = '.pushy-submenu',
+
+  submenuOpenClass = 'pushy-submenu-open',
+
+  submenuClosedClass = 'pushy-submenu-closed',
+
+  submenu = $(submenuClass);
+
+
+
+//close menu w/ esc key
+
+$(document).keyup(function(e) {
+
+  //check if esc key is pressed
+
+  if (e.keyCode == 27) {
+
+
+
+    //check if menu is open
+
+    if( body.hasClass(pushyOpenLeft) || body.hasClass(pushyOpenRight) ){
+
+      if(cssTransforms3d){
+
+        closePushy(); //close pushy
+
+      }else{
+
+        closePushyFallback();
+
+        opened = false; //set menu state
+
+      }
+
+      
+
+      //focus on menu button after menu is closed
+
+      if(menuBtnFocus){
+
+        menuBtnFocus.focus();
+
+      }
+
+      
+
+    }
+
+
+
+  }   
+
+});
+
+
+
+function togglePushy(){
+
+  //add class to body based on menu position
+
+  if( pushy.hasClass(pushyLeft) ){
+
+    body.toggleClass(pushyOpenLeft);
+
+  }else{
+
+    body.toggleClass(pushyOpenRight);
+
+  }
+
+
+
+  //focus on link in menu after css transition ends
+
+  if(menuLinkFocus){
+
+    pushy.one('transitionend', function() {
+
+      menuLinkFocus.focus();
+
+    });
+
+  }
+
+  
+
+}
+
+
+
+function closePushy(){
+
+  if( pushy.hasClass(pushyLeft) ){
+
+    body.removeClass(pushyOpenLeft);
+
+  }else{
+
+    body.removeClass(pushyOpenRight);
+
+  }
+
+}
+
+
+
+function openPushyFallback(){
+
+  //animate menu position based on CSS class
+
+  if( pushy.hasClass(pushyLeft) ){
+
+    body.addClass(pushyOpenLeft);
+
+    pushy.animate({left: "0px"}, menuSpeed);
+
+    container.animate({left: menuWidth}, menuSpeed);
+
+    //css class to add pushy capability
+
+    push.animate({left: menuWidth}, menuSpeed);
+
+  }else{
+
+    body.addClass(pushyOpenRight);
+
+    pushy.animate({right: '0px'}, menuSpeed);
+
+    container.animate({right: menuWidth}, menuSpeed);
+
+    push.animate({right: menuWidth}, menuSpeed);
+
+  }
+
+
+
+  //focus on link in menu
+
+  if(menuLinkFocus){
+
+    menuLinkFocus.focus();
+
+  }
+
+}
+
+
+
+function closePushyFallback(){
+
+  //animate menu position based on CSS class
+
+  if( pushy.hasClass(pushyLeft) ){
+
+    body.removeClass(pushyOpenLeft);
+
+    pushy.animate({left: "-" + menuWidth}, menuSpeed);
+
+    container.animate({left: "0px"}, menuSpeed);
+
+    //css class to add pushy capability
+
+    push.animate({left: "0px"}, menuSpeed);
+
+  }else{
+
+    body.removeClass(pushyOpenRight);
+
+    pushy.animate({right: "-" + menuWidth}, menuSpeed);
+
+    container.animate({right: "0px"}, menuSpeed);
+
+    push.animate({right: "0px"}, menuSpeed);
+
+  }
+
+}
+
+
+
+function toggleSubmenu(){
+
+  //hide submenu by default
+
+  $(submenuClass).addClass(submenuClosedClass);
+
+
+
+  $(submenuClass).on('click', function(){
+
+        var selected = $(this);
+
+
+
+        if( selected.hasClass(submenuClosedClass) ) {
+
+            //hide opened submenus
+
+            $(submenuClass).addClass(submenuClosedClass).removeClass(submenuOpenClass);
+
+            //show submenu
+
+            selected.removeClass(submenuClosedClass).addClass(submenuOpenClass);
+
+        }else{
+
+            //hide submenu
+
+            selected.addClass(submenuClosedClass).removeClass(submenuOpenClass);
+
+        }
+
+    });
+
+}
+
+
+
+//checks if 3d transforms are supported removing the modernizr dependency
+
+var cssTransforms3d = (function csstransforms3d(){
+
+  var el = document.createElement('p'),
+
+  supported = false,
+
+  transforms = {
+
+      'webkitTransform':'-webkit-transform',
+
+      'OTransform':'-o-transform',
+
+      'msTransform':'-ms-transform',
+
+      'MozTransform':'-moz-transform',
+
+      'transform':'transform'
+
+  };
+
+
+
+  if(document.body !== null) {
+
+    // Add it to the body to get the computed style
+
+    document.body.insertBefore(el, null);
+
+
+
+    for(var t in transforms){
+
+        if( el.style[t] !== undefined ){
+
+            el.style[t] = 'translate3d(1px,1px,1px)';
+
+            supported = window.getComputedStyle(el).getPropertyValue(transforms[t]);
+
+        }
+
+    }
+
+
+
+    document.body.removeChild(el);
+
+
+
+    return (supported !== undefined && supported.length > 0 && supported !== "none");
+
+  }else{
+
+    return false;
+
+  }
+
+})();
+
+
+
+if(cssTransforms3d){
+
+  //toggle submenu
+
+  toggleSubmenu();
+
+
+
+  //toggle menu
+
+  menuBtn.on('click', function(){
+
+    togglePushy();
+
+  });
+
+  //close menu when clicking site overlay
+
+  siteOverlay.on('click', function(){
+
+    togglePushy();
+
+  });
+
+}else{
+
+  //add css class to body
+
+  body.addClass('no-csstransforms3d');
+
+
+
+  //hide menu by default
+
+  if( pushy.hasClass(pushyLeft) ){
+
+    pushy.css({left: "-" + menuWidth});
+
+  }else{
+
+    pushy.css({right: "-" + menuWidth});
+
+  }
+
+
+
+  //fixes IE scrollbar issue
+
+  container.css({"overflow-x": "hidden"});
+
+
+
+  //keep track of menu state (open/close)
+
+  var opened = false;
+
+
+
+  //toggle submenu
+
+  toggleSubmenu();
+
+
+
+  //toggle menu
+
+  menuBtn.on('click', function(){
+
+    if (opened) {
+
+      closePushyFallback();
+
+      opened = false;
+
+    } else {
+
+      openPushyFallback();
+
+      opened = true;
+
+    }
+
+  });
+
+
+
+  //close menu when clicking site overlay
+
+  siteOverlay.on('click', function(){
+
+    if (opened) {
+
+      closePushyFallback();
+
+      opened = false;
+
+    } else {
+
+      openPushyFallback();
+
+      opened = true;
+
+    }
+
+  });
+
+}
+
+}(jQuery));
+    </script>
+  </footer>
 </body>
-
 </html>
