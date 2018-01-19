@@ -591,7 +591,63 @@ transform: translateY(-50%) rotate(90deg);
     }
   </style>
   <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script>
+    var isloading = true;
+    var loadinterval;
+    var rankingjsonurl = "https://script.google.com/macros/s/AKfycbzgXXIUc8PGq0-h-aZkZ9gfGBnBLi-BPn3JJ9cjV5B7ZbLu2eY/exec?resource=mkoth&item=ranking"
+    var request = jQuery.ajax
+      ({
+        method: "GET",
+        url: rankingjsonurl,
+        dataType: "json",
+        success: function (data)
+        {
+          var ranklist = data.response;
+          console.log(ranklist);
+          var table = jQuery("#ranktable");
+          var tablehead = jQuery("<thead></thead>");
+          var headerrow = jQuery("<tr></tr>").attr("id", "rank_table_header");
+          headerrow.append(jQuery("<th></th>").append("Rank"));
+          headerrow.append(jQuery("<th></th>").append("Player Name"));
+          headerrow.append(jQuery("<th></th>").append("Class"));
+          headerrow.append(jQuery("<th></th>").append("Points"));
+          headerrow.append(jQuery("<th></th>").append("ELO"));
+          tablehead.append(headerrow);
+          table.append(tablehead);
+          for (var i in ranklist)
+          {
+            if (ranklist.hasOwnProperty(i))
+            {
+              var element = ranklist[i];
+              var tablerow = jQuery("<tr></tr>").attr("id", element.Player_Name);
+              for (var key in element)
+              {
+                if (element.hasOwnProperty(key))
+                {
+                  var item = element[key];
+                  tablerow.append(jQuery("<td></td>").append(item).addClass(key));
+                }
+              }
+              table.append(tablerow);
+            }
+          }
+          isloading = false;
+          clearInterval(loadinterval);
+          jQuery("#loadrank").html("Rankings");
+          table.attr("style", "margin:0px");
+        },
+      });
+    window.onload = function ()
+    {
+      loadinterval = setInterval(function ()
+      {
+        var loadstring = $("#loadrank").html() + '.';
+        loadstring = loadstring.length > 10 ? loadstring.substring(0, 7) : loadstring;
+        $("#loadrank").html(loadstring);
+      }, 200);
+    }
 
+  </script>
 </head>
 <body>
   <header>
