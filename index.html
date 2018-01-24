@@ -35,6 +35,19 @@
     margin-left: 10%;
     margin-top: 5%;
   }
+  .leftsticky{
+    height: 100%;
+    position: fixed;
+    top:0;
+
+  }
+  .rightsticky{
+    position: fixed;
+    right: 0;
+    height: 100%;
+    top:0;
+    z-index:-1000;
+  }
   @media screen and (max-width: 700px)  {
     .team{
       width: 75%;
@@ -43,7 +56,7 @@
   </style>
 </head>
 <body>
-    <div class='topnav'>
+
   <header>
 
   <img src="https://cdn.discordapp.com/attachments/270838709287387136/401427004257468426/20180113_012725.png" alt="mkothpicandwords" class="mkothpicandwords";>
@@ -55,8 +68,7 @@
     <!-- Menu Button -->
     <button class="menu-btn">&#9776; Menu</button>
 </div>
-  </header>
-  <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);">
+
   <ul id="comnavbar">
       <b>
           <li><a href="https://mobilekoth.github.io/">Home</a></li>
@@ -76,7 +88,9 @@
         </ul>
     </div>
 </nav>
-</div>
+</header>
+  <img class='rightsticky' src='https://cdn.discordapp.com/attachments/270838709287387136/405777662141792267/20180125_013522.png' alt='mkothsticky'>
+  <img class='leftsticky' src='https://cdn.discordapp.com/attachments/270838709287387136/405777662771200010/20180125_013505.png' alt='sidething'>
   <h3>The Team</h3>
   <div class='teamandtext'>
     <img class='team' src='https://cdn.discordapp.com/attachments/270838709287387136/403900396831244309/FB_IMG_1516367754637.jpg' alt='darrell pic'>
