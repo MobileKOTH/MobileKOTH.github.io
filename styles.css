@@ -1,5 +1,8 @@
 .mkothpicandwords{
-	width: 35%;
+	position: relative;
+	display: block;
+	width: 25%;
+	left: 10%;
   }
 
   body {
@@ -13,15 +16,11 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
   }
 
-  .mkothpicandwords{
-	  top: 35px;
-  }
-
   #comnavbar {
 	list-style-type:none;
 	position:absolute;
-	left:38%;top:22px;
-	width: 70%;
+	left:33%;top:3px;
+	width: 65%;
   }
 
   li {
@@ -30,19 +29,19 @@
 
   li a {
 	display: block;
-	background-color: white;
 	text-align: center;
-	padding: 11px 14px;
+	padding: 11px 11px;
 	text-decoration: none;
-	width: 150px;
+	width: 140px;
 	font-family: "Georgia", Arial, Helvetica, sans-serif;
 	font-size: 22px;
 	color:black;
 	border-left: 1px solid lightgray;
+	position: center;
 
   }
   li a:hover:not(.active){
-	background-color: rgb(255,140,50);
+    color: rgb(255, 140, 50);
   }
 
   #mobilenavbar {
@@ -65,7 +64,7 @@
 	display: none;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 800px) {
 
 	.mkothpicandwords {
 	  width: 70%;
@@ -74,14 +73,15 @@
 	.pushy.pushy-left, #container{
 	display: block;
   }
-
-	div {
-	  display: block
-	}
-
 	#comnavbar {
 	  display: none;
 	}  
+	.leftsticky, .rightsticky{
+		display: none;
+	}
+	.mkothpicandwords{
+		left: 0;
+	}
 /* Lists */
 
 .pushyul , .pushysubmenuul {
