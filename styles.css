@@ -1,3 +1,7 @@
+p {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
 .leftsticky{
     height: 100%;
     position: fixed;
@@ -32,10 +36,11 @@
   }
 
   #comnavbar {
+	position: relative;
+	float: right;
 	list-style-type:none;
-	position:absolute;
-	left:33%;top:3px;
-	width: 65%;
+    top:-70px;
+	width: 650px;
   }
 
   li {
@@ -45,13 +50,10 @@
   li a {
 	display: block;
 	text-align: center;
-	padding: 11px 11px;
 	text-decoration: none;
-	width: 140px;
-	font-family: "Georgia", Arial, Helvetica, sans-serif;
-	font-size: 22px;
+	width: 120px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	color:black;
-	border-left: 1px solid lightgray;
 	position: center;
 
   }
@@ -79,7 +81,7 @@
 	display: none;
   }
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
 
 	.mkothpicandwords {
 	  width: 70%;
