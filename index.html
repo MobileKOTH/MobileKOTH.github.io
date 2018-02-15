@@ -10,33 +10,34 @@
   <style>
 
 
-
+    .discordthing{
+      display: block;
+      position: relative;
+      padding-bottom: 150px
+    }
     .discord{
       padding: 10px;
-      margin-left: 50%;
-      display: block;
+      margin-left:5%;
+      display: inline-block;
       position: absolute;
-      top: 10%;
-      max-width: 35%;
       object-fit: contain;
+      overflow:hidden;
     }
 
     .discordtext{
       width: 20%;
       margin-left: 20%;
-      display: block;
+      display: inline-block;
       position: relative;
     }
 
     h3 {
       font-family: 'Arial', serif;
-      position: center;
       position: relative;
       margin: auto;
       padding: 30px;
       text-align: center;
       color: rgb(250, 140, 50);
-      text-decoration: underline, bold;
       margin-top: 10px;
 
 
@@ -78,7 +79,9 @@
     }
 
     @media screen and (max-width: 900px) {
-
+      discordthing{
+        padding-bottom:0;
+      }
       .team {
         width: 75%;
       }
@@ -151,14 +154,17 @@
       </div>
     </nav>
   </header>
+  <div class='discordthing'>
   <h3 class='discordheader'>Discord</h3>
   <p class='discordtext'> Currently, MKOTH is being hosted on discord. The discord is where players request for games and is the place where strategies and new tactics are discussed.
      Furthermore, you don't have to be an actual MKOTH member to join our discord. Yes, <b> everyone </b> is welcome to join! Do follow our rules when you enter though!
      <br><br>Chat mods:<br> ILoveYou <br> KoalaKandy </p>
   <div class='discord'> 
-      <iframe src="https://discordapp.com/widget?id=271109067261476866&theme=dark"  height='500px' width='300px' object-fit='contain'  allowtransparency="true" 
+      <iframe src="https://discordapp.com/widget?id=271109067261476866&theme=dark"  height='450px' width='300px' object-fit='contain'  allowtransparency="true" 
         frameborder="0"></iframe>
   </div>
+</div>
+<hr>
   <div class='mkothdesc'>
   <h3>
     What is MKOTH?
@@ -175,6 +181,7 @@
     <br>
     <i>-Darrell (owner of MKOTH)</i>
   </p>
+  <hr>
   <img class='rightsticky' src='https://cdn.discordapp.com/attachments/270838709287387136/405777662141792267/20180125_013522.png'
     alt='mkothsticky'>
   <img class='leftsticky' src='https://cdn.discordapp.com/attachments/270838709287387136/407865567542771712/20180125_013505.png'
