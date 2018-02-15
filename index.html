@@ -10,17 +10,22 @@
   <style>
 
 
+
     .discord{
       padding: 10px;
       margin-left: 50%;
-      display: inline;
+      display: block;
+      position: absolute;
+      top: 10%;
+      max-width: 35%;
+      object-fit: contain;
     }
 
     .discordtext{
       width: 20%;
       margin-left: 20%;
-      display: inline-block;
-      position: absolute;
+      display: block;
+      position: relative;
     }
 
     h3 {
@@ -68,8 +73,12 @@
       display: block;
       margin-left: 19%;
     }
+    .mkothdesc{
+      position: relative;
+    }
 
     @media screen and (max-width: 900px) {
+
       .team {
         width: 75%;
       }
@@ -142,14 +151,15 @@
       </div>
     </nav>
   </header>
-  <h3>Discord</h3>
+  <h3 class='discordheader'>Discord</h3>
   <p class='discordtext'> Currently, MKOTH is being hosted on discord. The discord is where players request for games and is the place where strategies and new tactics are discussed.
      Furthermore, you don't have to be an actual MKOTH member to join our discord. Yes, <b> everyone </b> is welcome to join! Do follow our rules when you enter though!
      <br><br>Chat mods:<br> ILoveYou <br> KoalaKandy </p>
   <div class='discord'> 
-      <iframe src="https://discordapp.com/widget?id=271109067261476866&theme=dark" width="350" height="500" allowtransparency="true" 
+      <iframe src="https://discordapp.com/widget?id=271109067261476866&theme=dark"  height='500px' width='300px' object-fit='contain'  allowtransparency="true" 
         frameborder="0"></iframe>
   </div>
+  <div class='mkothdesc'>
   <h3>
     What is MKOTH?
   </h3>
@@ -160,6 +170,7 @@
       aims to be a place where new META and strategies are formed to faciitate the growth of the game and competitive scene."</i>
   </p>
   </i>
+</div>
   <p style='text-align:right; width: 70%'>
     <br>
     <i>-Darrell (owner of MKOTH)</i>
