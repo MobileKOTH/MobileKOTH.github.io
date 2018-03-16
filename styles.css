@@ -1,7 +1,9 @@
 p {
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
-
+p{
+  font-size:13px;
+}
 .leftsticky{
     height: 100%;
     position: fixed;
