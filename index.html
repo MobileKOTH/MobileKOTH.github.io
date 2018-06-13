@@ -1,720 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>MKOTH Test</title>
-  <link rel="shortcut icon" sizes="192x192" href="images/MKOTH Icon 192px.png">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <style>
+	<title>Riddle - Portfolio Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Riddle - Portfolio Template">
+	<meta name="keywords" content="portfolio, riddle, onepage, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="images/MKOTH Icon 192px.png" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="bootstrap.min.css"/>
+	<link rel="stylesheet" href="font-awesome.min.css"/>
+	<link rel="stylesheet" href="magnific-popup.css"/>
+	<link rel="stylesheet" href="style.css"/>
 
 
-    .discordthing{
-      display: block;
-      position: relative;
-      padding-bottom: 200px
-    }
-    .discord{
-      padding: 10px;
-      margin-left:5%;
-      display: inline-block;
-      position: absolute;
-      object-fit: contain;
-      overflow:hidden;
-    }
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
-    .discordtext{
-      width: 20%;
-      margin-left: 20%;
-      display: inline-block;
-      position: relative;
-    }
-
-    h3 {
-      font-family: 'Arial', serif;
-      position: relative;
-      margin: auto;
-      padding: 30px;
-      text-align: center;
-      color: rgb(250, 140, 50);
-      margin-top: 10px;
-
-
-    }
-
-    .team {
-      width: 100%;
-      border: 2px solid black;
-      border-radius: 30px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .text {
-      text-align: center;
-      font-family: 'Georgia', serif;
-      font-weight: 500;
-    }
-
-    .teamandtext {
-      display: inline-block;
-      width: 16%;
-      position: relative;
-      margin-left: 15%;
-      margin-top: 1%;
-
-    }
-
-    .darrellandhz {
-      display: block;
-      margin-left: 19%;
-    }
-
-    .cyandgim {
-      display: block;
-      margin-left: 19%;
-    }
-    .mkothdesc{
-      position: relative;
-    }
-
-    @media screen and (max-width: 900px) {
-
-      .discordtext{
-        width: 70%;
-        margin-left: 20%;
-        display: block;
-        position: relative;
-      }
-      .discord{
-        padding: 10px;
-        margin: 20%;
-        display: block;
-        position: relative;
-        object-fit: contain;
-        overflow:auto;
-      }
-      .discordthing{
-        padding-bottom:10px;
-      }
-      .team {
-        width: 75%;
-      }
-      .teamandtext {
-        display: block;
-        width: 60%;
-
-      }
-      .darrellandhz,
-      .cyandgim {
-        margin-left: 20%;
-      }
-      .text {
-        position: relative;
-        margin-left: -35px;
-
-      }
-    }
-  </style>
 </head>
-
 <body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
 
-  <header>
+	<!-- header section start -->
+	<header class="header-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-3">
+					<div class="logo">
+						<h2 class="site-logo">Riddle</h2>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-9">
+					<a href="" class="site-btn header-btn">Get in touch</a>
+					<nav class="main-menu">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="rankings.html">Rankings</a></li>
+							<li><a href="rankingsystem.html">System</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="nav-switch">
+			<i class="fa fa-bars"></i>
+		</div>
+	</header>
+	<!-- header section end -->
 
-    <img src="https://cdn.discordapp.com/attachments/270838709287387136/401427004257468426/20180113_012725.png" alt="mkothpicandwords"
-      class="mkothpicandwords" ;>
-    <!-- Site Overlay -->
-    <div class="site-overlay"></div>
+	<!-- intro section start -->
+	<section class="intro-section">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-xl-10 offset-xl-1">
+					<h2 class="section-title">I’m a freelance <span>digital designer</span>, with +10 years of experience</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- intro section end -->
 
-    <!-- Your Content -->
-    <div id="container">
-      <!-- Menu Button -->
-      <button class="menu-btn">&#9776; Menu</button>
-    </div>
 
-    <ul id="comnavbar">
-      <b>
-        <li>
-          <a href="https://mobilekoth.github.io/">Home</a>
-        </li>
-        <li>
-          <a href="http://mobileKoth.github.io/rankings">Rankings</a>
-        </li>
-        <li>
-          <a href="http://mobilekoth.github.io/rankingsysem">Ranking System</a>
-        </li>
-        <li>
-          <a href="http://mobilekoth.github.io/signups">Sign Ups</a>
-        </li>
-      </b>
-    </ul>
-    <nav class="pushy pushy-left">
-      <div class="pushy-content">
-        <ul class="pushyul">
+	<!-- portfolio section start -->
+	<section class="portfolio-section">
+		<div class="container">
+			<ul class="portfolio-filter controls">
+				<li class="control" data-filter="all">All</li>
+				<li class="control" data-filter=".web">Web design</li>
+				<li class="control" data-filter=".digital">Digital design</li>
+				<li class="control" data-filter=".rened">3D Renedering</li>
+				<li class="control" data-filter=".brand">Brand Identity</li>
+			</ul>
+		</div>                       
+		<div class="container-fluid p-md-0 ">
+			<div class="row portfolios-area">
+				<div class="mix col-lg-6 col-md-6 web">
+					<a href="img/portfolio/1.jpg" class="portfolio-item set-bg" data-setbg="img/portfolio/1.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-6 col-md-6 digital">
+					<a href="img/portfolio/2.jpg" class="portfolio-item set-bg " data-setbg="img/portfolio/2.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-4 col-md-6 web">
+					<a href="img/portfolio/3.jpg" class="portfolio-item set-bg" data-setbg="img/portfolio/3.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-4 col-md-6 digital">
+					<a href="img/portfolio/4.jpg" class="portfolio-item set-bg" data-setbg="img/portfolio/4.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-4 col-md-6 rened">
+					<a href="img/portfolio/5.jpg" class="portfolio-item set-bg" data-setbg="img/portfolio/5.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-12 col-md-6 brand">
+					<a href="img/portfolio/6.jpg" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-6 col-md-6 rened">
+					<a href="img/portfolio/7.jpg" class="portfolio-item set-bg" data-setbg="img/portfolio/7.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-6 col-md-6 brand">
+					<a href="img/portfolio/8.jpg" class="portfolio-item set-bg" data-setbg="img/portfolio/8.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- portfolio section end -->
 
-          <li class="pushy-link">
-            <a href="http://mobilekoth.github.io">Home :D</a>
-          </li>
-          <li class="pushy-link">
-            <a href="http://mobilekoth.github.io/rankings">Rankings :0</a>
-          </li>
-          <li class="pushy-link">
-            <a href="http://mobilekoth.github.io/rankingsystem">Ranking System</a>
-          </li>
-          <li class="pushy-link">
-            <a href="http://mobilekot.github.io/signups">Sign ups</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <div class='discordthing'>
-  <h3 class='discordheader'>Discord</h3>
-  <p class='discordtext'> Currently, MKOTH is being hosted on discord. The discord is where players request for games and is the place where strategies and new tactics are discussed.
-     Furthermore, you don't have to be an actual MKOTH member to join our discord. Yes, <b> everyone </b> is welcome to join! Do follow our rules when you enter though!
-     <br><br>Chat mods:<br> ILoveYou <br> KoalaKandy </p>
-  <div class='discord'> 
-      <iframe src="https://discordapp.com/widget?id=271109067261476866&theme=dark"  height='450px' width='300px' object-fit='contain'  allowtransparency="true" 
-        frameborder="0"></iframe>
-  </div>
+
+	<!-- footer section start -->
+	<footer class="footer-section text-center">
+		<div class="container">
+			<h2 class="section-title mb-5">Let’s work together</h2>
+			<a href="" class="site-btn">Get in touch</a>
+			<div class="social-links">
+				<a href=""><span class="fa fa-pinterest"></span></a>
+				<a href=""><span class="fa fa-linkedin"></span></a>
+				<a href=""><span class="fa fa-instagram"></span></a>
+				<a href=""><span class="fa fa-facebook"></span></a>
+				<a href=""><span class="fa fa-twitter"></span></a>
+			</div>
+			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </div>
-<hr>
-  <div class='mkothdesc'>
-  <h3>
-    What is MKOTH?
-  </h3>
-  <p style='width: 60%; margin-left: 20%;'>
-    <i>"MKOTH(Mobile King of the Hill) is athe mobile version of KOTH, an ongoing competition to find the best flash players
-      in the world of the popular Bloons TD Battles game. MKOTH, other than beingng just a competition, is also a community
-      for any player, weak or strong,who seek to improve and not just a home for the top BTDB players in the world. MKOTH
-      aims to be a place where new META and strategies are formed to faciitate the growth of the game and competitive scene."</i>
-  </p>
-  </i>
-</div>
-  <p style='text-align:right; width: 70%'>
-    <br>
-    <i>-Darrell (owner of MKOTH)</i>
-  </p>
-  <hr>
-  <img class='rightsticky' src='https://cdn.discordapp.com/attachments/270838709287387136/405777662141792267/20180125_013522.png'
-    alt='mkothsticky'>
-  <img class='leftsticky' src='https://cdn.discordapp.com/attachments/270838709287387136/407865567542771712/20180125_013505.png'
-    alt='sidething'>
-  <h3>The Team</h3>
-  <div class='darrellandhz'>
-    <div class='teamandtext'>
-      <img class='team' src='https://cdn.discordapp.com/attachments/270838709287387136/403900396831244309/FB_IMG_1516367754637.jpg'
-        alt='darrell pic'>
-      <p class='text'> The almighty one and only supreme leader Darrell.
-        <br>Darrell has been the current owner of MKOTH ever since Geem left.
-        <br> Press F to love Darrell.
-      </p>
-    </div>
-    <div class='teamandtext'>
-      <img class='team' src='https://cdn.discordapp.com/attachments/270838709287387136/403900175493627926/FB_IMG_1516367696663.jpg'
-        alt='hz pic'>
-      <p class='text'> NicetoEat is one of our most loved admins.
-        <br> He is also secretely a fan of all types of porn
-        <br> I wil stop here cuz too much info.
-        <br>
-        <br>
-        <br>
-      </p>
-    </div>
-  </div>
-  <div class='cyandgim'>
-    <div class='teamandtext'>
-      <img class='team' src='https://media.discordapp.net/attachments/270838709287387136/403910750214553601/Mr._Anchor_png.png?width=651&height=657'
-        alt='cy pic'>
-      <p class='text'>Cerlancism(CY) is your typoical shut in introverted coding nerd and class A weeb.
-        <br> Other than that he's one ofour lovely admins that also codes the system and bots :D</p>
-    </div>
-    <div class='teamandtext'>
-      <img class='team' src='https://cdn.discordapp.com/attachments/270838709287387136/403901102191542282/FB_IMG_1516367923436.jpg'
-        alt='gim pic'>
-      <p class='text'>" i love shotacon "
-        <br> * dont google it *
-        <br> -Geem, proud owner of 1.1gb worth of shota pics.
-        <br>
-        <br>
-        <br>
-        <br>
-      </p>
-    </div>
-  </div>
+		</div>
+	</footer>
+	<!-- footer section end -->
 
 
 
-  <footer>
-    <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
-    <script>
-
-      (function ($)
-      {
-
-        var pushy = $('.pushy'), //menu css class
-
-          body = $('body'),
-
-          container = $('#container'), //container css class
-
-          push = $('.push'), //css class to add pushy capability
-
-          pushyLeft = 'pushy-left', //css class for left menu position
-
-          pushyOpenLeft = 'pushy-open-left', //css class when menu is open (left position)
-
-          pushyOpenRight = 'pushy-open-right', //css class when menu is open (right position)
-
-          siteOverlay = $('.site-overlay'), //site overlay
-
-          menuBtn = $('.menu-btn, .pushy-link'), //css classes to toggle the menu
-
-          menuBtnFocus = $('.menu-btn'), //css class to focus when menu is closed w/ esc key
-
-          menuLinkFocus = $(pushy.data('focus')), //focus on link when menu is open
-
-          menuSpeed = 200, //jQuery fallback menu speed
-
-          menuWidth = pushy.width() + 'px', //jQuery fallback menu width
-
-          submenuClass = '.pushy-submenu',
-
-          submenuOpenClass = 'pushy-submenu-open',
-
-          submenuClosedClass = 'pushy-submenu-closed',
-
-          submenu = $(submenuClass);
-
-
-
-        //close menu w/ esc key
-
-        $(document).keyup(function (e)
-        {
-
-          //check if esc key is pressed
-
-          if (e.keyCode == 27)
-          {
-
-
-
-            //check if menu is open
-
-            if (body.hasClass(pushyOpenLeft) || body.hasClass(pushyOpenRight))
-            {
-
-              if (cssTransforms3d)
-              {
-
-                closePushy(); //close pushy
-
-              } else
-              {
-
-                closePushyFallback();
-
-                opened = false; //set menu state
-
-              }
-
-
-
-              //focus on menu button after menu is closed
-
-              if (menuBtnFocus)
-              {
-
-                menuBtnFocus.focus();
-
-              }
-
-
-
-            }
-
-
-
-          }
-
-        });
-
-
-
-        function togglePushy()
-        {
-
-          //add class to body based on menu position
-
-          if (pushy.hasClass(pushyLeft))
-          {
-
-            body.toggleClass(pushyOpenLeft);
-
-          } else
-          {
-
-            body.toggleClass(pushyOpenRight);
-
-          }
-
-
-
-          //focus on link in menu after css transition ends
-
-          if (menuLinkFocus)
-          {
-
-            pushy.one('transitionend', function ()
-            {
-
-              menuLinkFocus.focus();
-
-            });
-
-          }
-
-
-
-        }
-
-
-
-        function closePushy()
-        {
-
-          if (pushy.hasClass(pushyLeft))
-          {
-
-            body.removeClass(pushyOpenLeft);
-
-          } else          
-          {
-
-            body.removeClass(pushyOpenRight);
-
-          }
-
-        }
-
-
-
-        function openPushyFallback()
-        {
-
-          //animate menu position based on CSS class
-
-          if (pushy.hasClass(pushyLeft))
-          {
-
-            body.addClass(pushyOpenLeft);
-
-            pushy.animate({ left: "0px" }, menuSpeed);
-
-            container.animate({ left: menuWidth }, menuSpeed);
-
-            //css class to add pushy capability
-
-            push.animate({ left: menuWidth }, menuSpeed);
-
-          } else
-          {
-
-            body.addClass(pushyOpenRight);
-
-            pushy.animate({ right: '0px' }, menuSpeed);
-
-            container.animate({ right: menuWidth }, menuSpeed);
-
-            push.animate({ right: menuWidth }, menuSpeed);
-
-          }
-
-
-
-          //focus on link in menu
-
-          if (menuLinkFocus)
-          {
-
-            menuLinkFocus.focus();
-
-          }
-
-        }
-
-
-
-        function closePushyFallback()        
-        {
-
-          //animate menu position based on CSS class
-
-          if (pushy.hasClass(pushyLeft))
-          {
-
-            body.removeClass(pushyOpenLeft);
-
-            pushy.animate({ left: "-" + menuWidth }, menuSpeed);
-
-            container.animate({ left: "0px" }, menuSpeed);
-
-            //css class to add pushy capability
-
-            push.animate({ left: "0px" }, menuSpeed);
-
-          } else          
-          {
-
-            body.removeClass(pushyOpenRight);
-
-            pushy.animate({ right: "-" + menuWidth }, menuSpeed);
-
-            container.animate({ right: "0px" }, menuSpeed);
-
-            push.animate({ right: "0px" }, menuSpeed);
-
-          }
-
-        }
-
-
-
-        function toggleSubmenu()
-        {
-
-          //hide submenu by default
-
-          $(submenuClass).addClass(submenuClosedClass);
-
-
-
-          $(submenuClass).on('click', function ()
-          {
-
-            var selected = $(this);
-
-
-
-            if (selected.hasClass(submenuClosedClass))
-            {
-
-              //hide opened submenus
-
-              $(submenuClass).addClass(submenuClosedClass).removeClass(submenuOpenClass);
-
-              //show submenu
-
-              selected.removeClass(submenuClosedClass).addClass(submenuOpenClass);
-
-            } else
-            {
-
-              //hide submenu
-
-              selected.addClass(submenuClosedClass).removeClass(submenuOpenClass);
-
-            }
-
-          });
-
-        }
-
-
-
-        //checks if 3d transforms are supported removing the modernizr dependency
-
-        var cssTransforms3d = (function csstransforms3d()
-        {
-
-          var el = document.createElement('p'),
-
-            supported = false,
-
-            transforms = {
-
-              'webkitTransform': '-webkit-transform',
-
-              'OTransform': '-o-transform',
-
-              'msTransform': '-ms-transform',
-
-              'MozTransform': '-moz-transform',
-
-              'transform': 'transform'
-
-            };
-
-
-
-          if (document.body !== null)
-          {
-
-            // Add it to the body to get the computed style
-
-            document.body.insertBefore(el, null);
-
-
-
-            for (var t in transforms)
-            {
-
-              if (el.style[t] !== undefined)
-              {
-
-                el.style[t] = 'translate3d(1px,1px,1px)';
-
-                supported = window.getComputedStyle(el).getPropertyValue(transforms[t]);
-
-              }
-
-            }
-
-
-
-            document.body.removeChild(el);
-
-
-
-            return (supported !== undefined && supported.length > 0 && supported !== "none");
-
-          } else
-          {
-
-            return false;
-
-          }
-
-        })();
-
-
-
-        if (cssTransforms3d)
-        {
-
-          //toggle submenu
-
-          toggleSubmenu();
-
-
-
-          //toggle menu
-
-          menuBtn.on('click', function ()          
-          {
-
-            togglePushy();
-
-          });
-
-          //close menu when clicking site overlay
-
-          siteOverlay.on('click', function ()          
-          {
-
-            togglePushy();
-
-          });
-
-        } else
-        {
-
-          //add css class to body
-
-          body.addClass('no-csstransforms3d');
-
-
-
-          //hide menu by default
-
-          if (pushy.hasClass(pushyLeft))
-          {
-
-            pushy.css({ left: "-" + menuWidth });
-
-          } else
-          {
-
-            pushy.css({ right: "-" + menuWidth });
-
-          }
-
-
-
-          //fixes IE scrollbar issue
-
-          container.css({ "overflow-x": "hidden" });
-
-
-
-          //keep track of menu state (open/close)
-
-          var opened = false;
-
-
-
-          //toggle submenu
-
-          toggleSubmenu();
-
-
-
-          //toggle menu
-
-          menuBtn.on('click', function ()          
-          {
-
-            if (opened)
-            {
-
-              closePushyFallback();
-
-              opened = false;
-
-            } else
-            {
-
-              openPushyFallback();
-
-              opened = true;
-
-            }
-
-          });
-
-
-
-          //close menu when clicking site overlay
-
-          siteOverlay.on('click', function ()
-          {
-
-            if (opened)
-            {
-
-              closePushyFallback();
-
-              opened = false;
-
-            } else
-            {
-
-              openPushyFallback();
-
-              opened = true;
-
-            }
-
-          });
-
-        }
-
-      }(jQuery));
-
-    </script>
-  </footer>
+	<!--====== Javascripts & Jquery ======-->
+	<script src="jquery-2.1.4.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="mixitup.min.js"></script>
+	<script src="magnific-popup.min.js"></script>
+	<script src="main.js"></script>
 </body>
-
 </html>
