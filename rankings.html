@@ -2,184 +2,195 @@
 <html lang="en">
 
 <head>
-  <title>MKOTH Test</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Riddle - Portfolio Template">
-	<meta name="keywords" content="portfolio, riddle, onepage, creative, html">
-  <style>
-#loadrank{
-      margin-left:20%;
-    }
-    #ranktable {
-      display: block;
-      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-      border-collapse: collapse;
-      transition: 0.5s;
-      position: relative;
-      width:100%;
-      margin:auto;
-    }
-    #ranktable th,
-    td {
-      border-bottom: 1px solid #ddd;
-    }
-    #ranktable th {
-      background-color: rgb(255, 140, 50);
-      padding-top: 12px;
-      padding-bottom: 12px;
-      size: 32px;
-    }
-    #ranktable tr {
-      background-color: rgba(255, 140, 50, 0.07);
-      text-align: center;
-      transition: 0.15s;
-      padding-top: 12px;
-      padding-bottom: 12px;
-    }
-    #ranktable td {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      size:20px;
-    }
-    #ranktable tr:nth-child(even) {
-      background-color: rgb(255, 255, 255);
-    }
-    #ranktable tr:hover {
-      background-color: rgb(255, 140, 50);
-    }
- 
-    @media screen and (max-width: 800px){
-      .leftsticky, .rightsticky{
-        display: none;
-      }
-      #ranktable{
-        margin-left:0;
-      }
-    }
+    <title>MKOTH Test</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Riddle - Portfolio Template">
+    <meta name="keywords" content="portfolio, riddle, onepage, creative, html">
+    <style>
+        #ranktable {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            transition: 0.5s;
+            position: relative;
+            width: 100%;
+            margin-left: -100%;
+        }
 
-  </style>
-  	<!-- Favicon -->   
-	<link href="images/MKOTH Icon 192px.png" rel="shortcut icon"/>
+        #ranktable th,
+        td {
+            border-bottom: 1px solid #ddd;
+        }
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+        #ranktable th {
+            background-color: rgb(255, 140, 50);
+            padding-top: 12px;
+            padding-bottom: 12px;
+            size: 32px;
+        }
 
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="bootstrap.min.css"/>
-	<link rel="stylesheet" href="font-awesome.min.css"/>
-	<link rel="stylesheet" href="magnific-popup.css"/>
-	<link rel="stylesheet" href="styles.css"/>
+        #ranktable tr {
+            background-color: rgba(255, 140, 50, 0.07);
+            text-align: center;
+            transition: 0.15s;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        #ranktable td {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            size: 20px;
+        }
+
+        #ranktable tr:nth-child(even) {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #ranktable tr:hover {
+            background-color: rgb(255, 140, 50);
+        }
+
+        @media screen and (max-width: 800px) {
+            .leftsticky,
+            .rightsticky {
+                display: none;
+            }
+        }
+    </style>
+    <!-- Favicon -->
+    <link href="images/MKOTH Icon 192px.png" rel="shortcut icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="font-awesome.min.css" />
+    <link rel="stylesheet" href="magnific-popup.css" />
+    <link rel="stylesheet" href="styles.css" />
 
 
-	<!--[if lt IE 9]>
+    <!--====== Javascripts & Jquery ======-->
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="mixitup.min.js"></script>
+    <script src="magnific-popup.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        window.onload = function ()
+        {
+            loadinterval = setInterval(function ()
+            {
+                var loadstring = $("#loadrank").html() + '.';
+                loadstring = loadstring.length > 10 ? loadstring.substring(0, 7) : loadstring;
+                $("#loadrank").html(loadstring);
+            }, 200);
+
+            var isloading = true;
+            var loadinterval;
+            var rankingjsonurl = "https://script.google.com/macros/s/AKfycbzgXXIUc8PGq0-h-aZkZ9gfGBnBLi-BPn3JJ9cjV5B7ZbLu2eY/exec?resource=mkoth&item=ranking"
+            var request = jQuery.ajax
+                ({
+                    method: "GET",
+                    url: rankingjsonurl,
+                    dataType: "json",
+                    success: function (data)
+                    {
+                        var ranklist = data.response;
+                        console.log(ranklist);
+                        var table = jQuery("#ranktable");
+                        var tablehead = jQuery("<thead></thead>");
+                        var headerrow = jQuery("<tr></tr>").attr("id", "rank_table_header");
+                        headerrow.append(jQuery("<th></th>").append("Rank"));
+                        headerrow.append(jQuery("<th></th>").append("Player Name"));
+                        headerrow.append(jQuery("<th></th>").append("Class"));
+                        headerrow.append(jQuery("<th></th>").append("Points"));
+                        headerrow.append(jQuery("<th></th>").append("ELO"));
+                        tablehead.append(headerrow);
+                        table.append(tablehead);
+                        for (var i in ranklist)
+                        {
+                            if (ranklist.hasOwnProperty(i))
+                            {
+                                var element = ranklist[i];
+                                var tablerow = jQuery("<tr></tr>").attr("id", element.Player_Name);
+                                for (var key in element)
+                                {
+                                    if (element.hasOwnProperty(key))
+                                    {
+                                        var item = element[key];
+                                        tablerow.append(jQuery("<td></td>").append(item).addClass(key));
+                                    }
+                                }
+                                table.append(tablerow);
+                            }
+                        }
+                        isloading = false;
+                        clearInterval(loadinterval);
+                        jQuery("#loadrank").html("Rankings");
+                        table.attr("style", "margin-left:0%");
+                    },
+                });
+        }
+    </script>
+    <!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
 </head>
+
 <body>
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
 
-	<!-- header section start -->
-	<header class="header-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 col-md-3">
-					<div class="logo">
-						<h2 class="site-logo">MKOTH</h2>
-					</div>
-				</div>
-				<div class="col-lg-8 col-md-9">
-					<a href="signups.html" class="site-btn header-btn">Sin Up</a>
-					<nav class="main-menu">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="rankings.html">Rankings</a></li>
-							<li><a href="rankingsystem.html">System</a></li>
-							<li><a href="contact.html">.</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-		<div class="nav-switch">
-			<i class="fa fa-bars"></i>
-		</div>
-	</header>
-  <!-- header section end -->
-  <!-- rank table -->
-  <h2 id="loadrank">Loading</h2>
-  <table id="ranktable">
-  <!-- rank table end -->
-  <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
-  <script>
-    var isloading = true;
-    var loadinterval;
-    var rankingjsonurl = "https://script.google.com/macros/s/AKfycbzgXXIUc8PGq0-h-aZkZ9gfGBnBLi-BPn3JJ9cjV5B7ZbLu2eY/exec?resource=mkoth&item=ranking"
-    var request = jQuery.ajax
-      ({
-        method: "GET",
-        url: rankingjsonurl,
-        dataType: "json",
-        success: function (data)
-        {
-          var ranklist = data.response;
-          console.log(ranklist);
-          var table = jQuery("#ranktable");
-          var tablehead = jQuery("<thead></thead>");
-          var headerrow = jQuery("<tr></tr>").attr("id", "rank_table_header");
-          headerrow.append(jQuery("<th></th>").append("Rank"));
-          headerrow.append(jQuery("<th></th>").append("Player Name"));
-          headerrow.append(jQuery("<th></th>").append("Class"));
-          headerrow.append(jQuery("<th></th>").append("Points"));
-          headerrow.append(jQuery("<th></th>").append("ELO"));
-          tablehead.append(headerrow);
-          table.append(tablehead);
-          for (var i in ranklist)
-          {
-            if (ranklist.hasOwnProperty(i))
-            {
-              var element = ranklist[i];
-              var tablerow = jQuery("<tr></tr>").attr("id", element.Player_Name);
-              for (var key in element)
-              {
-                if (element.hasOwnProperty(key))
-                {
-                  var item = element[key];
-                  tablerow.append(jQuery("<td></td>").append(item).addClass(key));
-                }
-              }
-              table.append(tablerow);
-            }
-          }
-          isloading = false;
-          clearInterval(loadinterval);
-          jQuery("#loadrank").html("Rankings");
+    <!-- header section start -->
+    <header class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-3">
+                    <div class="logo">
+                        <h2 class="site-logo">MKOTH</h2>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-9">
+                    <a href="signups.html" class="site-btn header-btn">Sin Up</a>
+                    <nav class="main-menu">
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="rankings.html">Rankings</a>
+                            </li>
+                            <li>
+                                <a href="rankingsystem.html">System</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">.</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="nav-switch">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+    <!-- header section end -->
 
-     },
-      });
-    window.onload = function ()
-    {
-      loadinterval = setInterval(function ()
-      {
-        var loadstring = $("#loadrank").html() + '.';
-        loadstring = loadstring.length > 10 ? loadstring.substring(0, 7) : loadstring;
-        $("#loadrank").html(loadstring);
-      }, 200);
-    }
-  </script>
-	<!--====== Javascripts & Jquery ======-->
-	<script src="jquery-2.1.4.min.js"></script>
-	<script src="bootstrap.min.js"></script>
-	<script src="mixitup.min.js"></script>
-	<script src="magnific-popup.min.js"></script>
-	<script src="main.js"></script>
-
-</head>
+    <!-- rank table -->
+    <div class="container">
+        <h2 id="loadrank">Loading</h2>
+        <table id="ranktable">
+        </table>
+    </div>
+    <!-- rank table end -->
 </body>
+
 </html>
