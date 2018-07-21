@@ -6,477 +6,71 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Riddle - Portfolio Template">
+  <meta name="keywords" content="portfolio, riddle, onepage, creative, html">
   <style>
- 
-  </style>
-  <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
 
+
+
+  </style>
+   	<!-- Favicon -->   
+     <link href="images/MKOTH Icon 192px.png" rel="shortcut icon"/>
+
+     <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+   
+     <!-- Stylesheets -->
+     <link rel="stylesheet" href="bootstrap.min.css"/>
+     <link rel="stylesheet" href="font-awesome.min.css"/>
+     <link rel="stylesheet" href="magnific-popup.css"/>
+     <link rel="stylesheet" href="styles.css"/>
+   
+   
+     <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+     <![endif]-->
+   
 </head>
 <body>
-  <header>
-
-  <img src="https://cdn.discordapp.com/attachments/270838709287387136/401427004257468426/20180113_012725.png" alt="mkothpicandwords" class="mkothpicandwords">
-<!-- Site Overlay -->
-<div class="site-overlay"></div>
-
-<!-- Your Content -->
-<div id="container">
-    <!-- Menu Button -->
-    <button class="menu-btn">&#9776; Menu</button>
-</div>
-  </header>
-  <img src="images/MKOTH Banner.jpg" alt="Banner" style="width: 100%;">
-  <ul id="comnavbar">
-      <b>
-          <li><a href="https://mobilekoth.github.io/">Home</a></li>
-          <li><a href="http://MobileKoth.github.io/rankings">Rankings</a></li>
-          <li><a href="#ranking system">Ranking System</a></li>
-          <li><a href="#sign up">Sign Ups</a></li>
-      </b>
-  </ul>
-  <nav class="pushy pushy-left">
-    <div class="pushy-content">
-        <ul class="pushyul">
-
-            <li class="pushy-link"><a href="http://mobilekoth.github.io">Home</a></li>
-            <li class="pushy-link"><a href="http://mobilekoth.github.io/rankings">Rankings</a></li>
-            <li class="pushy-link"><a href="http://mobilekoth.github.io/rankingsystem">Ranking System</a></li>
-            <li class="pushy-link"><a href="http://mobilekot.github.io/signups">Sign ups</a></li>
-        </ul>
+	<!-- Page Preloder -->
+	<div id="preloder">
+      <div class="loader"></div>
     </div>
-</nav>
-<img class='rightsticky' src='https://cdn.discordapp.com/attachments/270838709287387136/405777662141792267/20180125_013522.png'
-alt='mkothsticky'>
-<img class='leftsticky' src='https://cdn.discordapp.com/attachments/270838709287387136/407865567542771712/20180125_013505.png'
-alt='sidething'>
-
-  <h2 id="loadrank">Loading</h2>
-  <table id="ranktable">
-  </table>
-  <footer>
-    <script>
-      
-    (function ($) {
-
-var pushy = $('.pushy'), //menu css class
-
-  body = $('body'),
-
-  container = $('#container'), //container css class
-
-  push = $('.push'), //css class to add pushy capability
-
-  pushyLeft = 'pushy-left', //css class for left menu position
-
-  pushyOpenLeft = 'pushy-open-left', //css class when menu is open (left position)
-
-  pushyOpenRight = 'pushy-open-right', //css class when menu is open (right position)
-
-  siteOverlay = $('.site-overlay'), //site overlay
-
-  menuBtn = $('.menu-btn, .pushy-link'), //css classes to toggle the menu
-
-  menuBtnFocus = $('.menu-btn'), //css class to focus when menu is closed w/ esc key
-
-  menuLinkFocus = $(pushy.data('focus')), //focus on link when menu is open
-
-  menuSpeed = 200, //jQuery fallback menu speed
-
-  menuWidth = pushy.width() + 'px', //jQuery fallback menu width
-
-  submenuClass = '.pushy-submenu',
-
-  submenuOpenClass = 'pushy-submenu-open',
-
-  submenuClosedClass = 'pushy-submenu-closed',
-
-  submenu = $(submenuClass);
-
-
-
-//close menu w/ esc key
-
-$(document).keyup(function(e) {
-
-  //check if esc key is pressed
-
-  if (e.keyCode == 27) {
-
-
-
-    //check if menu is open
-
-    if( body.hasClass(pushyOpenLeft) || body.hasClass(pushyOpenRight) ){
-
-      if(cssTransforms3d){
-
-        closePushy(); //close pushy
-
-      }else{
-
-        closePushyFallback();
-
-        opened = false; //set menu state
-
-      }
-
-      
-
-      //focus on menu button after menu is closed
-
-      if(menuBtnFocus){
-
-        menuBtnFocus.focus();
-
-      }
-
-      
-
-    }
-
-
-
-  }   
-
-});
-
-
-
-function togglePushy(){
-
-  //add class to body based on menu position
-
-  if( pushy.hasClass(pushyLeft) ){
-
-    body.toggleClass(pushyOpenLeft);
-
-  }else{
-
-    body.toggleClass(pushyOpenRight);
-
-  }
-
-
-
-  //focus on link in menu after css transition ends
-
-  if(menuLinkFocus){
-
-    pushy.one('transitionend', function() {
-
-      menuLinkFocus.focus();
-
-    });
-
-  }
-
   
-
-}
-
-
-
-function closePushy(){
-
-  if( pushy.hasClass(pushyLeft) ){
-
-    body.removeClass(pushyOpenLeft);
-
-  }else{
-
-    body.removeClass(pushyOpenRight);
-
-  }
-
-}
-
-
-
-function openPushyFallback(){
-
-  //animate menu position based on CSS class
-
-  if( pushy.hasClass(pushyLeft) ){
-
-    body.addClass(pushyOpenLeft);
-
-    pushy.animate({left: "0px"}, menuSpeed);
-
-    container.animate({left: menuWidth}, menuSpeed);
-
-    //css class to add pushy capability
-
-    push.animate({left: menuWidth}, menuSpeed);
-
-  }else{
-
-    body.addClass(pushyOpenRight);
-
-    pushy.animate({right: '0px'}, menuSpeed);
-
-    container.animate({right: menuWidth}, menuSpeed);
-
-    push.animate({right: menuWidth}, menuSpeed);
-
-  }
-
-
-
-  //focus on link in menu
-
-  if(menuLinkFocus){
-
-    menuLinkFocus.focus();
-
-  }
-
-}
-
-
-
-function closePushyFallback(){
-
-  //animate menu position based on CSS class
-
-  if( pushy.hasClass(pushyLeft) ){
-
-    body.removeClass(pushyOpenLeft);
-
-    pushy.animate({left: "-" + menuWidth}, menuSpeed);
-
-    container.animate({left: "0px"}, menuSpeed);
-
-    //css class to add pushy capability
-
-    push.animate({left: "0px"}, menuSpeed);
-
-  }else{
-
-    body.removeClass(pushyOpenRight);
-
-    pushy.animate({right: "-" + menuWidth}, menuSpeed);
-
-    container.animate({right: "0px"}, menuSpeed);
-
-    push.animate({right: "0px"}, menuSpeed);
-
-  }
-
-}
-
-
-
-function toggleSubmenu(){
-
-  //hide submenu by default
-
-  $(submenuClass).addClass(submenuClosedClass);
-
-
-
-  $(submenuClass).on('click', function(){
-
-        var selected = $(this);
-
-
-
-        if( selected.hasClass(submenuClosedClass) ) {
-
-            //hide opened submenus
-
-            $(submenuClass).addClass(submenuClosedClass).removeClass(submenuOpenClass);
-
-            //show submenu
-
-            selected.removeClass(submenuClosedClass).addClass(submenuOpenClass);
-
-        }else{
-
-            //hide submenu
-
-            selected.addClass(submenuClosedClass).removeClass(submenuOpenClass);
-
-        }
-
-    });
-
-}
-
-
-
-//checks if 3d transforms are supported removing the modernizr dependency
-
-var cssTransforms3d = (function csstransforms3d(){
-
-  var el = document.createElement('p'),
-
-  supported = false,
-
-  transforms = {
-
-      'webkitTransform':'-webkit-transform',
-
-      'OTransform':'-o-transform',
-
-      'msTransform':'-ms-transform',
-
-      'MozTransform':'-moz-transform',
-
-      'transform':'transform'
-
-  };
-
-
-
-  if(document.body !== null) {
-
-    // Add it to the body to get the computed style
-
-    document.body.insertBefore(el, null);
-
-
-
-    for(var t in transforms){
-
-        if( el.style[t] !== undefined ){
-
-            el.style[t] = 'translate3d(1px,1px,1px)';
-
-            supported = window.getComputedStyle(el).getPropertyValue(transforms[t]);
-
-        }
-
-    }
-
-
-
-    document.body.removeChild(el);
-
-
-
-    return (supported !== undefined && supported.length > 0 && supported !== "none");
-
-  }else{
-
-    return false;
-
-  }
-
-})();
-
-
-
-if(cssTransforms3d){
-
-  //toggle submenu
-
-  toggleSubmenu();
-
-
-
-  //toggle menu
-
-  menuBtn.on('click', function(){
-
-    togglePushy();
-
-  });
-
-  //close menu when clicking site overlay
-
-  siteOverlay.on('click', function(){
-
-    togglePushy();
-
-  });
-
-}else{
-
-  //add css class to body
-
-  body.addClass('no-csstransforms3d');
-
-
-
-  //hide menu by default
-
-  if( pushy.hasClass(pushyLeft) ){
-
-    pushy.css({left: "-" + menuWidth});
-
-  }else{
-
-    pushy.css({right: "-" + menuWidth});
-
-  }
-
-
-
-  //fixes IE scrollbar issue
-
-  container.css({"overflow-x": "hidden"});
-
-
-
-  //keep track of menu state (open/close)
-
-  var opened = false;
-
-
-
-  //toggle submenu
-
-  toggleSubmenu();
-
-
-
-  //toggle menu
-
-  menuBtn.on('click', function(){
-
-    if (opened) {
-
-      closePushyFallback();
-
-      opened = false;
-
-    } else {
-
-      openPushyFallback();
-
-      opened = true;
-
-    }
-
-  });
-
-
-
-  //close menu when clicking site overlay
-
-  siteOverlay.on('click', function(){
-
-    if (opened) {
-
-      closePushyFallback();
-
-      opened = false;
-
-    } else {
-
-      openPushyFallback();
-
-      opened = true;
-
-    }
-
-  });
-
-}
-
-}(jQuery));
-    </script>
-  </footer>
+    <!-- header section start -->
+    <header class="header-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-3">
+            <div class="logo">
+              <h2 class="site-logo">MKOTH</h2>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-9">
+            <a href="signups.html" class="site-btn header-btn">Sin Up</a>
+            <nav class="main-menu">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rankings.html">Rankings</a></li>
+                <li><a href="rankingsystem.html">System</a></li>
+                <li><a href="contact.html">.</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="nav-switch">
+        <i class="fa fa-bars"></i>
+      </div>
+    </header>
+    <!-- header section end -->
+	<!--====== Javascripts & Jquery ======-->
+	<script src="jquery-2.1.4.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="mixitup.min.js"></script>
+	<script src="magnific-popup.min.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>
    
