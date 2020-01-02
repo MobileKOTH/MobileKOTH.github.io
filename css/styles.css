@@ -21,15 +21,17 @@ h3,
 h4,
 h5,
 h6 {
-  color: #001418;
+  color: #000000;
   margin: 0;
+  position: relative;
+  left: 50px;
   font-weight: 600;
   font-family: 'Josefin Sans', sans-serif;
 }
 
 p {
   font-size: 18px;
-  color: #979797;
+  color: #464646;
   line-height: 1.8;
 }
 
