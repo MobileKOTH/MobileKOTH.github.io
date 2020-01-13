@@ -51,13 +51,13 @@
                             <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="rankings.html">Rankings</a>
+                            <a href="rankings.html">LeagueRankings</a>
                         </li>
                         <li>
                             <a href="rankingsystem.html">System</a>
                         </li>
                         <li>
-                            <a href="contact.html">.</a>
+                            <a href="signups.html">Tournaments</a>
                         </li>
                     </ul>
                 </nav>
@@ -72,8 +72,53 @@
 
   <div class='container'>
     <h1>Overview</h1>
+    <p>The ranking of players in the MKOTH League is based on their ELO. 
+    Players challenge each other in a best of 3 series to better their ELO.</p>
+    <h2>Classes</h2>
+    <p>There are 4 classes in the MKOTH rankings, which are determined by their ELO.</p>
+    <ul>
+      <li>Nobleman: 1400 and above</li>
+      <li>Squire: 1300 to 1399</li>
+      <li>Vassal: 1250 to l299</li>
+      <li>Peasant: 1249 and below</li>
+    </ul>
+    <br>
+    <p>The king is a special title awarded to the top ranking player on the condition that there are at least 2 noblemen present on the rankings.</p>
+    <h2>Points</h2>
+    <div class="seriesrule">
+      <table class="ruletable">
+      <caption>Table of points</caption>
+      <tr class="ruletr">
+        <th class="ruletd">Series Result</th>
+        <th class="ruletd">Net Change in Points</th>
+      </tr>
+      <tr class="ruletr">
+        <td class="ruletd">Win (above)</td>
+        <td class="ruletd">3</td>
+      </tr>
+      <tr class="ruletr">
+      <td class="ruletd">Win (below)</td>
+      <td class="ruletd">1</td>
+      </tr>
+      <tr class="ruletr">
+        <td class="ruletd">Lose (200+)</td>
+        <td class="ruletd">-5</td>
+      </tr>
+      <tr class="ruletr">
+        <td class="ruletd">Lose (otherwise)</td>
+        <td class="ruletd">0</td>
+      </tr>
+      </table>
+    </div>
+    <p>As seen from the table above, Points can be gained or lost. No negative points shall be allowed. 
+    A player gains points when he wins a series. If he wins against a player of lower ELO than him, 
+    he gains only 1 point. If he wins against a player of same or higher ELO than him, he gains 3 points. 
+    A player loses 5 points when he loses against a player of 200 or more ELO than him. 
+    <b>Hence having 5 points is a prerequisite before a player is able to challenge someone of a much higher ELO.</b></p>
+    <h2>Holiday Mode (HM)</h2>
+    <p>A player moves into HM when he does not complete a series within 30 days</p>
     <table class="ruletable" style="width:100%">
-    <caption>The 10 MKOTH Rules<sup>TM</sup> </caption>
+    <caption>The 10 MKOTH Rules</caption>
     <tr>
         <th class="ruleth">S/N</th>
         <th class="ruleth">Series Rules</th>
@@ -84,7 +129,7 @@
     </tr>
     <tr>
         <td class="ruletd">2</td>
-        <td class="ruletd">The starting map is Shapes. The lower ranked player will choose one of the 2 possible starting maps. Either
+        <td class="ruletd">The starting map is <b>Wattle Resort</b>. Either
         player can invite for the starting map. If there is a dispute over who should invite first, the lower ranked player
         must invite for the first map, followed by the person selecting the map.</td>
     </tr>
@@ -105,8 +150,7 @@
     <tr>
         <td class="ruletd">5</td>
         <td class="ruletd">Each player may choose to ban 1 tower for the entire series, via the MKOTH bot, however all bans will be universal. 
-        All powers are allowed. 4th tower may be used if BOTH
-        players agree, otherwise, it is prohibited by default.(refer to rule 7)</td>
+        The 4th tower and powers may only be used if BOTH players agree, otherwise, it is prohibited by default.(refer to rule 7)</td>
     </tr>
     <tr>
         <td class="ruletd">6</td>
