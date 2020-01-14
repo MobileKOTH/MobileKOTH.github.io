@@ -50,6 +50,18 @@ img {
   max-width: 100%;
 }
 
+.tourney1, .tourney2, .tourney3, .tourney4, .tourney5, .tourney6, .tourney7, .tourney8{
+  max-width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 11%;
+}
+
+.hi{
+  margin-top:11%;
+}
+
 input:focus,
 select:focus,
 button:focus,
