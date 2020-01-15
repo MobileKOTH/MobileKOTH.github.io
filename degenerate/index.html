@@ -11,6 +11,7 @@
         * {
             margin: 0;
             padding: 0;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -18,7 +19,7 @@
 <body>
     <iframe id="content" src="../index.html" frameborder="0" width=""></iframe>
     <script>
-        const frame = /** @type {HTMLIFrameElement} */ (document.querySelector("#content"));
+        var frame = /** @type {HTMLIFrameElement} */ (document.querySelector("#content"));
 
         frame.width = window.innerWidth
         frame.height = window.innerHeight
