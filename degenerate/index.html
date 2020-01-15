@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            background-position: center;
         }
     </style>
 </head>
@@ -19,16 +20,33 @@
 <body>
     <iframe id="content" src="../index.html" frameborder="0" width=""></iframe>
     <script>
+        loadanime()
+
+        var firstLoaded = false;
         var frame = /** @type {HTMLIFrameElement} */ (document.querySelector("#content"));
 
-        frame.width = window.innerWidth
-        frame.height = window.innerHeight
+        setFrameSize()
+
+        window.addEventListener("resize", setFrameSize)
 
         frame.addEventListener("load", function ()
         {
-            loadanime()
+            if (firstLoaded)
+            {
+                loadanime()
+            }
+            if (!firstLoaded)
+            {
+                firstLoaded = true
+            }
             frame.contentWindow.document.body.style.backgroundColor = "rgba(255,255,255,0.5)"
         })
+
+        function setFrameSize()
+        {
+            frame.width = window.innerWidth
+            frame.height = window.innerHeight
+        }
 
         function loadanime()
         {
@@ -46,6 +64,11 @@
             model = data[0];
             console.log(model);
             jQuery("body").css("background-image", "url('" + "https://cerlancism-cors-proxy.glitch.me/" + model.sample_url + "')");
+            var link = frame.contentWindow.document.createElement("a")
+            link.href = "https://yande.re/post/show/" + model.id
+            link.innerHTML = "Image source: " + link.href
+            link.target = "_blank"
+            frame.contentWindow.document.body.appendChild(link)
         }
     </script>
 </body>
