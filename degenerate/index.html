@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <iframe id="content" src="../index.html" frameborder="0" width=""></iframe>
+    <script>
+        const frame = /** @type {HTMLIFrameElement} */ (document.querySelector("#content"));
+
+        frame.width = window.innerWidth
+        frame.height = window.innerHeight
+
+        frame.addEventListener("load", function ()
+        {
+            loadanime()
+            frame.contentWindow.document.body.style.backgroundColor = "rgba(255,255,255,0.5)"
+        })
+
+        function loadanime()
+        {
+            jQuery.ajax
+                ({
+                    method: "GET",
+                    url: "https://yande.re/post.json?limit=1&tags=asuna_(sword_art_online)+score:%3E=100+rating:s+order:random",
+                    dataType: "json",
+                    success: loadbackgroundsuccess
+                });
+        }
+
+        function loadbackgroundsuccess(data, status, xhr)
+        {
+            model = data[0];
+            console.log(model);
+            jQuery("body").css("background-image", "url('" + "https://cerlancism-cors-proxy.glitch.me/" + model.sample_url + "')");
+        }
+    </script>
+</body>
+
+</html>
