@@ -37,7 +37,7 @@ h6 {
 }
 
 .seriesrule {
-  margin: 10px;
+  margin-top: 10px;
 }
 
 p {
@@ -733,7 +733,7 @@ ol {
     width: 100%;
     z-index: 999;
     left: 0;
-    top: 30px;
+    /* top: 30px; */
     padding-top: 15px;
     display: none;
   }

@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-  <title>Mobile KOTH - Ranking System</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mobile KOTH">
-  <!-- Favicon -->
-  <link href="images/MKOTH Icon 192px.png" rel="shortcut icon" />
+    <title>Mobile KOTH - Ranking System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mobile KOTH">
+    <!-- Favicon -->
+    <link href="images/MKOTH Icon 192px.png" rel="shortcut icon" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/magnific-popup.css" />
-  <link rel="stylesheet" href="css/styles.css" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
 
-  <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
      <![endif]-->
@@ -27,163 +27,167 @@
 </head>
 
 <body>
-  <!-- Page Preloder -->
-  <div id="preloder">
-    <div class="loader"></div>
-  </div>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
 
-  <!-- header section start -->
-  <header class="header-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-3">
-                <div class="logo">
-                    <a href="index.html">
-                        <h2 class="site-logo">MKOTH</h2>
-                    </a>
+    <!-- header section start -->
+    <header class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-3">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h2 class="site-logo">MKOTH</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-9">
+                    <a href="https://discord.gg/JBDHjHF" class="site-btn header-btn">Sign Up</a>
+                    <nav class="main-menu">
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="rankings.html">LeagueRankings</a>
+                            </li>
+                            <li>
+                                <a href="system.html">System</a>
+                            </li>
+                            <li>
+                                <a href="tournaments.html">Tournaments</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="col-lg-8 col-md-9">
-                <a href="https://discord.gg/J25hW9" class="site-btn header-btn">Sign Up</a>
-                <nav class="main-menu">
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="rankings.html">LeagueRankings</a>
-                        </li>
-                        <li>
-                            <a href="system.html">System</a>
-                        </li>
-                        <li>
-                            <a href="tournaments.html">Tournaments</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
         </div>
-    </div>
-    <div class="nav-switch">
-        <i class="fa fa-bars"></i>
-    </div>
-</header>
-  <!-- header section end -->
+        <div class="nav-switch">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+    <!-- header section end -->
 
-  <div class='container'>
-    <h1>Overview</h1>
-    <p>The ranking of players in the MKOTH League is based on their ELO. 
-    Players challenge each other in a best of 3 series to better their ELO.</p>
-    <h4>Classes</h4>
-    <p>There are 4 classes in the MKOTH rankings, which are determined by their ELO.</p>
-    <ul>
-      <li>Nobleman: 1400 and above</li>
-      <li>Squire: 1300 to 1399</li>
-      <li>Vassal: 1250 to l299</li>
-      <li>Peasant: 1249 and below</li>
-    </ul>
-    <br>
-    <p>The king is a special title awarded to the top ranking player on the condition that there are at least 2 noblemen present on the rankings.</p>
-    <h4>Points</h4>
-    <div class="seriesrule">
-      <table class="ruletable">
-      <caption>Table of points</caption>
-      <tr class="ruletr">
-        <th class="ruletd">Series Result</th>
-        <th class="ruletd">Net Change in Points</th>
-      </tr>
-      <tr class="ruletr">
-        <td class="ruletd">Win (above)</td>
-        <td class="ruletd">3</td>
-      </tr>
-      <tr class="ruletr">
-      <td class="ruletd">Win (below)</td>
-      <td class="ruletd">1</td>
-      </tr>
-      <tr class="ruletr">
-        <td class="ruletd">Lose (200+)</td>
-        <td class="ruletd">-5</td>
-      </tr>
-      <tr class="ruletr">
-        <td class="ruletd">Lose (otherwise)</td>
-        <td class="ruletd">0</td>
-      </tr>
-      </table>
+    <div class='container'>
+        <h1>Overview</h1>
+        <p>The ranking of players in the MKOTH League is based on their Elo.
+            Players challenge each other in a best of 3 series to better their Elo.</p>
+        <h4>Classes</h4>
+        <p>There are 4 classes in the MKOTH rankings, which are determined by their Elo.</p>
+        <div class="container">
+            <ul>
+                <li>Nobleman: 1400 and above</li>
+                <li>Squire: 1300 to 1399</li>
+                <li>Vassal: 1250 to l299</li>
+                <li>Peasant: 1249 and below</li>
+            </ul>
+        </div>
+        <br>
+        <p>The king is a special title awarded to the top ranking player on the condition that there are at least 2 other noblemen present on the rankings.</p>
+        <h4>Points</h4>
+        <div class="seriesrule">
+            <table class="ruletable">
+                <caption>Table of points</caption>
+                <tr class="ruletr">
+                    <th class="ruletd">Series Result</th>
+                    <th class="ruletd">Net Change in Points</th>
+                </tr>
+                <tr class="ruletr">
+                    <td class="ruletd">Win (above)</td>
+                    <td class="ruletd">3</td>
+                </tr>
+                <tr class="ruletr">
+                    <td class="ruletd">Win (below)</td>
+                    <td class="ruletd">1</td>
+                </tr>
+                <tr class="ruletr">
+                    <td class="ruletd">Lose (300+)</td>
+                    <td class="ruletd">-5</td>
+                </tr>
+                <tr class="ruletr">
+                    <td class="ruletd">Lose (otherwise)</td>
+                    <td class="ruletd">0</td>
+                </tr>
+            </table>
+        </div>
+        <p>
+            As seen from the table above, Points can be gained or lost. No negative points shall be allowed.
+            A player gains points when he wins a series. If he wins against a player of lower Elo than him,
+            he gains only 1 point. If he wins against a player of same or higher Elo than him, he gains 3 points.
+            A player loses 5 points when he loses against a player of more than 1300 Elo and of 300 or more Elo than him.
+            <b>Hence, having 5 points is a prerequisite before a player is able to challenge someone of a much higher Elo.</b>
+        </p>
+        <h4>Holiday Mode (HM)</h4>
+        <p>A player moves into HM when he does not complete a series within 30 days</p>
+        <table class="ruletable" style="width:100%">
+            <caption>The 10 MKOTH Rules</caption>
+            <tr>
+                <th class="ruleth">S/N</th>
+                <th class="ruleth">Series Rules</th>
+            </tr>
+            <tr>
+                <td class="ruletd">1</td>
+                <td class="ruletd">All games are played in assault mode with classic rules.</td>
+            </tr>
+            <tr>
+                <td class="ruletd">2</td>
+                <td class="ruletd">The starting map is <b>Wattle Resort</b>. Either
+                    player can invite for the starting map. If there is a dispute over who should invite first, the lower ranked player
+                    must invite for the first map, followed by the person selecting the map.</td>
+            </tr>
+            <tr>
+                <td class="ruletd">3</td>
+                <td class="ruletd">The game ends when a player reaches 0 lives, or at the start of round 38. The player with most lives at the end wins.
+                    The player who lost in the game will decide the map for the next game.</td>
+            </tr>
+            <tr>
+                <td class="ruletd">4</td>
+                <td class="ruletd">It is considered a draw if both players have same amount of lives by the start of round 38 OR if both players reaches
+                    0 lives before round 38 OR a the same defeat/victory screen is presented on both players screens. If there is a draw,
+                    the person who didn't pick the map will invite and select the next map. Games that are drawn do not count as a complete
+                    game in a series. For example, in a best of 3 series, if there is 1 win and 2 draws, the series is considered incomplete
+                    and both players have to continue playing until a player gets 2 wins. Maps cannot be repeated unless all maps have
+                    been played during the series.</td>
+            </tr>
+            <tr>
+                <td class="ruletd">5</td>
+                <td class="ruletd">Each player may choose to ban 1 tower for the entire series, via the MKOTH bot, however all bans will be universal.
+                    The 4th tower and powers may only be used if BOTH players agree, otherwise, it is prohibited by default.(refer to rule 7)</td>
+            </tr>
+            <tr>
+                <td class="ruletd">6</td>
+                <td class="ruletd">If one player disconnects during a game, the other player decides whether to rematch, take the win or take a draw.</td>
+            </tr>
+            <tr>
+                <td class="ruletd">7</td>
+                <td class="ruletd">Players have the right to add or amend any rules mentioned above for their series, as long as both players agree.
+                    It is encouraged that both players explicitly state the terms in which they play in before the series starts.
+                </td>
+            </tr>
+            <tr>
+                <td class="ruletd">8</td>
+                <td class="ruletd">Players can only do one series with the same person every 12 hours.</td>
+            </tr>
+            <tr>
+                <td class="ruletd">9</td>
+                <td class="ruletd">Players are not allowed to dodge series after it begins. If a player avoids playing the opponent more than 2 times
+                    when he is able to, the opponent may claim a forfeit win with manager’s approval. Managers will make a final decision
+                    on whether the player is dodging based on chat evidence.</td>
+            </tr>
+            <tr>
+                <td class="ruletd">10</td>
+                <td class="ruletd">Cheating of any kind, such as modding, abusing glitches, hacking, using of macros or spying(battles tv) etc. is strictly prohibited.</td>
+            </tr>
+        </table>
     </div>
-    <p>As seen from the table above, Points can be gained or lost. No negative points shall be allowed. 
-    A player gains points when he wins a series. If he wins against a player of lower ELO than him, 
-    he gains only 1 point. If he wins against a player of same or higher ELO than him, he gains 3 points. 
-    A player loses 5 points when he loses against a player of 200 or more ELO than him. 
-    <b>Hence having 5 points is a prerequisite before a player is able to challenge someone of a much higher ELO.</b></p>
-    <h4>Holiday Mode (HM)</h4>
-    <p>A player moves into HM when he does not complete a series within 30 days</p>
-    <table class="ruletable" style="width:100%">
-    <caption>The 10 MKOTH Rules</caption>
-    <tr>
-        <th class="ruleth">S/N</th>
-        <th class="ruleth">Series Rules</th>
-    </tr>
-    <tr>
-        <td class="ruletd">1</td>
-        <td class="ruletd">All games are played in assault mode with classic rules.</td>
-    </tr>
-    <tr>
-        <td class="ruletd">2</td>
-        <td class="ruletd">The starting map is <b>Wattle Resort</b>. Either
-        player can invite for the starting map. If there is a dispute over who should invite first, the lower ranked player
-        must invite for the first map, followed by the person selecting the map.</td>
-    </tr>
-    <tr>
-        <td class="ruletd">3</td>    
-        <td class="ruletd">The game ends when a player reaches 0 lives, or at the start of round 38. The player with most lives at the end wins.
-        The player who lost in the game will decide the map for the next game.</td>
-    </tr>
-    <tr>
-        <td class="ruletd">4</td>
-        <td class="ruletd">It is considered a draw if both players have same amount of lives by the start of round 38 OR if both players reaches
-        0 lives before round 38 OR a the same defeat/victory screen is presented on both players screens. If there is a draw,
-        the person who didn't pick the map will invite and select the next map. Games that are drawn do not count as a complete
-        game in a series. For example, in a best of 3 series, if there is 1 win and 2 draws, the series is considered incomplete
-        and both players have to continue playing until a player gets 2 wins. Maps cannot be repeated unless all maps have
-        been played during the series.</td>
-    </tr>
-    <tr>
-        <td class="ruletd">5</td>
-        <td class="ruletd">Each player may choose to ban 1 tower for the entire series, via the MKOTH bot, however all bans will be universal. 
-        The 4th tower and powers may only be used if BOTH players agree, otherwise, it is prohibited by default.(refer to rule 7)</td>
-    </tr>
-    <tr>
-        <td class="ruletd">6</td>
-        <td class="ruletd">If one player disconnects during a game, the other player decides whether to rematch, take the win or take a draw.</td>
-    </tr>
-    <tr>
-        <td class="ruletd">7</td>
-        <td class="ruletd">Players have the right to add or amend any rules mentioned above for their series, as long as both players agree.
-        It is encouraged that both players explicitly state the terms in which they play in before the series starts.    
-        </td>
-    </tr>
-    <tr>
-        <td class="ruletd">8</td>
-        <td class="ruletd">Players can only do one series with the same person every 12 hours.</td>
-    </tr>
-    <tr>
-        <td class="ruletd">9</td>
-        <td class="ruletd">Players are not allowed to dodge series after it begins. If a player avoids playing the opponent more than 2 times
-        when he is able to, the opponent may claim a forfeit win with manager’s approval. Managers will make a final decision
-        on whether the player is dodging based on chat evidence.</td>
-    </tr>
-    <tr>
-        <td class="ruletd">10</td>
-        <td class="ruletd">Cheating of any kind, such as modding, abusing glitches, hacking, using of macros or spying(battles tv) etc. is strictly prohibited.</td>
-    </tr>
-    </table>
-    </div>
-  <!--====== Javascripts & Jquery ======-->
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/mixitup.min.js"></script>
-  <script src="js/magnific-popup.min.js"></script>
-  <script src="js/main.js"></script>
+    <!--====== Javascripts & Jquery ======-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/magnific-popup.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
